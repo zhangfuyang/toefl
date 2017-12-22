@@ -71,6 +71,7 @@
             this.textBox2.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox2.Location = new System.Drawing.Point(400, 394);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(454, 65);
             this.textBox2.TabIndex = 3;
             // 
@@ -83,6 +84,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "确定";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -93,6 +95,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "退出";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -113,6 +116,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "注册";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // login
             // 

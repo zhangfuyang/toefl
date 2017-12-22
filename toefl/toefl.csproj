@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,7 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChooseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseDialog.Designer.cs">
+      <DependentUpon>ChooseDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="config\SystemConfig.cs" />
+    <Compile Include="dataclass\DatabaseHelp.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,12 +69,39 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reading.Designer.cs">
+      <DependentUpon>reading.cs</DependentUpon>
+    </Compile>
     <Compile Include="register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
     </Compile>
+    <Compile Include="series.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="series.Designer.cs">
+      <DependentUpon>series.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestBox.Designer.cs">
+      <DependentUpon>TestBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="write.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="write.Designer.cs">
+      <DependentUpon>write.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChooseDialog.resx">
+      <DependentUpon>ChooseDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,8 +117,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="reading.resx">
+      <DependentUpon>reading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="register.resx">
       <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="series.resx">
+      <DependentUpon>series.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestBox.resx">
+      <DependentUpon>TestBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

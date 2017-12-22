@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace toefl
 {
-    public partial class Form1 : Form
+    public partial class reading : Form
     {
         private float X;
         private float Y;
-        public Form1()
+        public reading()
         {
             InitializeComponent();
             X = this.Width;
@@ -22,22 +22,6 @@ namespace toefl
             this.Resize += new System.EventHandler(this.Form1_Resize);
             setTag(this);
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            login login_Form = new login();
-
-            DialogResult result = login_Form.ShowDialog();
-            if (result == DialogResult.Cancel)
-            {
-                System.Environment.Exit(0);
-            }
-            setup();
-        }
-
-        private void setup()
-        {
-            label1.Text = "你好! " + SystemConfig.name;
-            study_label.Text = "    累计学习时间:" + SystemConfig.time.ToString() + "h";
-            right_label.Text = "      平均正确率:" + SystemConfig.acc.ToString();
-            count_label.Text = "累计练习题目数量:" + SystemConfig.question_num.ToString();
         }
 
         private void setTag(Control cons)
@@ -82,24 +66,6 @@ namespace toefl
             setControls(newx, newy, this);
             //this.Text = this.Width.ToString() +" "+ this.Height.ToString();  
 
-        }
-
-        private void tpo_Click(object sender, EventArgs e)
-        {
-            ChooseDialog Dialog_form = new ChooseDialog();
-           // this.Hide();
-            Dialog_form.ShowDialog();
-            //this.Show();
-        }
-
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult closeWindowsBox = MessageBox.Show("是否保存本次做题情况到数据库", "提示信息", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if(closeWindowsBox == DialogResult.Yes)
-            {
-                //写入数据库
-
-            }
         }
     }
 }
