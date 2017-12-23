@@ -87,6 +87,7 @@
     <Compile Include="series.Designer.cs">
       <DependentUpon>series.cs</DependentUpon>
     </Compile>
+    <Compile Include="test.cs" />
     <Compile Include="TestBox.cs">
       <SubType>Form</SubType>
     </Compile>
