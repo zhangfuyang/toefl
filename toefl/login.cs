@@ -42,12 +42,13 @@ namespace toefl
                 SystemConfig.name = textBox1.Text;
                 SqlDataReader reader = DatabaseHelp.getReader(sql);
                 reader.Read();
-                SystemConfig.name = DatabaseHelp.convert(SystemConfig.name, reader["name"]);
-                SystemConfig.password = DatabaseHelp.convert(SystemConfig.password, reader["password"]);
-                SystemConfig.email = DatabaseHelp.convert(SystemConfig.email, reader["email"]);
+                SystemConfig.name = DatabaseHelp.convert(SystemConfig.name, reader["name"]).Trim();
+                SystemConfig.password = DatabaseHelp.convert(SystemConfig.password, reader["password"]).Trim();
+                SystemConfig.email = DatabaseHelp.convert(SystemConfig.email, reader["email"]).Trim();
                 SystemConfig.acc = DatabaseHelp.convert(SystemConfig.acc, reader["acc"]);
                 SystemConfig.time = DatabaseHelp.convert(SystemConfig.time, reader["time"]);
                 SystemConfig.question_num = DatabaseHelp.convert(SystemConfig.question_num, reader["question_num"]);
+                reader.Close();
                 DialogResult = DialogResult.OK;
             }
             else

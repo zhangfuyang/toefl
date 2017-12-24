@@ -87,7 +87,6 @@
     <Compile Include="series.Designer.cs">
       <DependentUpon>series.cs</DependentUpon>
     </Compile>
-    <Compile Include="test.cs" />
     <Compile Include="TestBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestBox.resx">
       <DependentUpon>TestBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="write.resx">
+      <DependentUpon>write.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

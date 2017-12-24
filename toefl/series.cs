@@ -75,5 +75,11 @@ namespace toefl
             reading read_form = new reading();
             read_form.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            write write_form = new write(1);
+            write_form.ShowDialog();
+        }
     }
 }

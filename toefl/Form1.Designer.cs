@@ -449,11 +449,18 @@
             this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 30;
+            this.listBox1.Items.AddRange(new object[] {
+            "asdasd",
+            "asdasd",
+            "xcxzcwaeqw",
+            "rtert"});
             this.listBox1.Location = new System.Drawing.Point(3, 620);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(458, 544);
             this.listBox1.TabIndex = 7;
+            this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDoubleClick);
             // 
             // label5
             // 

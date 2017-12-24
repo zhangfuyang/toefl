@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace toefl
 {
@@ -38,6 +39,20 @@ namespace toefl
             study_label.Text = "    累计学习时间:" + SystemConfig.time.ToString() + "h";
             right_label.Text = "      平均正确率:" + SystemConfig.acc.ToString();
             count_label.Text = "累计练习题目数量:" + SystemConfig.question_num.ToString();
+
+            listBox1.Items.Clear();
+            string sql = "select * from ReadingQuestion inner join (select id,ReadingAns.date from ReadingAns where (name = '";
+            sql+= SystemConfig.name + "'and ReadingAns.date in (select max(date) as date from ReadingAns where name = '";
+            sql += SystemConfig.name;
+            sql += "' and correct = 0 group by id))) as xx on ReadingQuestion.id = xx.id order by date desc";
+            SqlDataReader reader = DatabaseHelp.getReader(sql);
+            for(int i = 0; i < 15; i++)
+            {
+                if (!reader.Read())
+                    break;
+                listBox1.Items.Add(reader["type"] + ":" + reader["stem"]);
+            }
+            reader.Close();
         }
 
         private void setTag(Control cons)
@@ -100,6 +115,16 @@ namespace toefl
                 //写入数据库
 
             }
+        }
+
+        private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int index = this.listBox1.IndexFromPoint(e.Location);
+            if (index == System.Windows.Forms.ListBox.NoMatches)
+            {
+                return;
+            }
+            //链接到reading界面
         }
     }
 }
