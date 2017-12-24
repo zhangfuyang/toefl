@@ -23,6 +23,7 @@ namespace toefl
         {
             register register_form = new register();
             register_form.ShowDialog();
+
         }
 
         //退出事件

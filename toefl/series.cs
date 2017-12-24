@@ -14,9 +14,13 @@ namespace toefl
     {
         private float X;
         private float Y;
-        public series()
+        private int tpoNo;
+        private int model;
+        public series(int tpoNo,int model)
         {
             InitializeComponent();
+            this.tpoNo = tpoNo;
+            this.model = model;
             X = this.Width;
             Y = this.Height;
             this.Resize += new System.EventHandler(this.Form1_Resize);
@@ -72,7 +76,8 @@ namespace toefl
 
         private void reading_Click(object sender, EventArgs e)
         {
-            reading read_form = new reading();
+            int artnumber=this.tpoNo*3-3+ Convert.ToInt32((sender as Button).Name.Replace("button", ""));
+            reading read_form = new reading(1,artnumber);
             read_form.ShowDialog();
         }
 

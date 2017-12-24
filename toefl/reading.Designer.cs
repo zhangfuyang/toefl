@@ -42,6 +42,8 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.question_label = new System.Windows.Forms.Label();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -56,6 +58,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -65,8 +68,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.webBrowser1);
-            this.splitContainer1.Size = new System.Drawing.Size(1854, 1164);
-            this.splitContainer1.SplitterDistance = 908;
+            this.splitContainer1.Size = new System.Drawing.Size(989, 582);
+            this.splitContainer1.SplitterDistance = 484;
+            this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer2
@@ -74,6 +78,7 @@
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -89,56 +94,64 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.AutoScroll = true;
+            this.splitContainer2.Panel2.Controls.Add(this.checkBox6);
+            this.splitContainer2.Panel2.Controls.Add(this.checkBox5);
             this.splitContainer2.Panel2.Controls.Add(this.checkBox4);
             this.splitContainer2.Panel2.Controls.Add(this.checkBox3);
             this.splitContainer2.Panel2.Controls.Add(this.checkBox2);
             this.splitContainer2.Panel2.Controls.Add(this.checkBox1);
             this.splitContainer2.Panel2.Controls.Add(this.question_label);
-            this.splitContainer2.Size = new System.Drawing.Size(908, 1164);
+            this.splitContainer2.Size = new System.Drawing.Size(484, 582);
             this.splitContainer2.SplitterDistance = 122;
+            this.splitContainer2.SplitterWidth = 2;
             this.splitContainer2.TabIndex = 0;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(528, 78);
+            this.button5.Location = new System.Drawing.Point(282, 39);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(201, 71);
+            this.button5.Size = new System.Drawing.Size(107, 36);
             this.button5.TabIndex = 5;
             this.button5.Text = "view text";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(266, 78);
+            this.button4.Location = new System.Drawing.Point(142, 39);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(201, 71);
+            this.button4.Size = new System.Drawing.Size(107, 36);
             this.button4.TabIndex = 4;
             this.button4.Text = "next";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(19, 78);
+            this.button3.Location = new System.Drawing.Point(10, 39);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(201, 71);
+            this.button3.Size = new System.Drawing.Size(107, 36);
             this.button3.TabIndex = 3;
             this.button3.Text = "back";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(405, 10);
+            this.button2.Location = new System.Drawing.Point(216, 5);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 43);
+            this.button2.Size = new System.Drawing.Size(87, 22);
             this.button2.TabIndex = 2;
             this.button2.Text = "暂停";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(207, 12);
+            this.button1.Location = new System.Drawing.Point(110, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 41);
+            this.button1.Size = new System.Drawing.Size(84, 20);
             this.button1.TabIndex = 1;
             this.button1.Text = "隐藏时间";
             this.button1.UseVisualStyleBackColor = true;
@@ -147,18 +160,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(6, 4);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 40);
+            this.label1.Size = new System.Drawing.Size(89, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "xx:xx:xx";
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(78, 1293);
+            this.checkBox4.Location = new System.Drawing.Point(42, 646);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(546, 274);
+            this.checkBox4.Size = new System.Drawing.Size(293, 139);
             this.checkBox4.TabIndex = 4;
             this.checkBox4.Text = "zxcxczsdcasdxsadsssssssssssssssss\r\nssssssssssssssssssssssssss\r\ns\r\nsds\r\nadasdsad\r\n" +
     "\r\n\r\n\r\nsadasdasdasdasdasdsaweswd";
@@ -167,9 +182,10 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(78, 902);
+            this.checkBox3.Location = new System.Drawing.Point(42, 451);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(546, 274);
+            this.checkBox3.Size = new System.Drawing.Size(293, 139);
             this.checkBox3.TabIndex = 3;
             this.checkBox3.Text = "zxcxczsdcasdxsadsssssssssssssssss\r\nssssssssssssssssssssssssss\r\ns\r\nsds\r\nadasdsad\r\n" +
     "\r\n\r\n\r\nsadasdasdasdasdasdsaweswd";
@@ -178,9 +194,10 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(78, 520);
+            this.checkBox2.Location = new System.Drawing.Point(42, 260);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(546, 274);
+            this.checkBox2.Size = new System.Drawing.Size(293, 139);
             this.checkBox2.TabIndex = 2;
             this.checkBox2.Text = "zxcxczsdcasdxsadsssssssssssssssss\r\nssssssssssssssssssssssssss\r\ns\r\nsds\r\nadasdsad\r\n" +
     "\r\n\r\n\r\nsadasdasdasdasdasdsaweswd";
@@ -189,9 +206,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(78, 178);
+            this.checkBox1.Location = new System.Drawing.Point(42, 89);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(546, 274);
+            this.checkBox1.Size = new System.Drawing.Size(293, 139);
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "zxcxczsdcasdxsadsssssssssssssssss\r\nssssssssssssssssssssssssss\r\ns\r\nsds\r\nadasdsad\r\n" +
     "\r\n\r\n\r\nsadasdasdasdasdasdsaweswd";
@@ -201,9 +219,10 @@
             // 
             this.question_label.AutoSize = true;
             this.question_label.Font = new System.Drawing.Font("宋体", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.question_label.Location = new System.Drawing.Point(69, 20);
+            this.question_label.Location = new System.Drawing.Point(64, 10);
+            this.question_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.question_label.Name = "question_label";
-            this.question_label.Size = new System.Drawing.Size(669, 106);
+            this.question_label.Size = new System.Drawing.Size(346, 54);
             this.question_label.TabIndex = 0;
             this.question_label.Text = "题目XXXXXXXXXXXXXXXXXXXX\r\nXXXXXXXXXXXXXXXXXX";
             // 
@@ -211,22 +230,49 @@
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(11, 10);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(942, 1164);
+            this.webBrowser1.Size = new System.Drawing.Size(503, 582);
             this.webBrowser1.TabIndex = 0;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(42, 811);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(293, 139);
+            this.checkBox5.TabIndex = 5;
+            this.checkBox5.Text = "zxcxczsdcasdxsadsssssssssssssssss\r\nssssssssssssssssssssssssss\r\ns\r\nsds\r\nadasdsad\r\n" +
+    "\r\n\r\n\r\nsadasdasdasdasdasdsaweswd";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(42, 989);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(293, 139);
+            this.checkBox6.TabIndex = 6;
+            this.checkBox6.Text = "zxcxczsdcasdxsadsssssssssssssssss\r\nssssssssssssssssssssssssss\r\ns\r\nsds\r\nadasdsad\r\n" +
+    "\r\n\r\n\r\nsadasdasdasdasdasdsaweswd";
+            this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // reading
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1854, 1164);
+            this.ClientSize = new System.Drawing.Size(989, 582);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "reading";
             this.Text = "reading";
+            this.Load += new System.EventHandler(this.reading_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -257,5 +303,7 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
     }
 }
