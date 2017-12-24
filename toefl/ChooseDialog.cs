@@ -12,9 +12,12 @@ namespace toefl
 {
     public partial class ChooseDialog : Form
     {
-        public ChooseDialog()
+        private int tpoNo;
+
+        public ChooseDialog(int tpoNo)
         {
             InitializeComponent();
+            this.tpoNo = tpoNo;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,7 +28,7 @@ namespace toefl
         //选择练习
         private void button2_Click(object sender, EventArgs e)
         {
-            series Series_Form = new series();
+            series Series_Form = new series(this.tpoNo,1);
             this.Hide();
             Series_Form.WindowState = FormWindowState.Maximized;
             Series_Form.ShowDialog();

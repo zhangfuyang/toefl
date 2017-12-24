@@ -47,12 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="article.cs" />
     <Compile Include="ChooseDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChooseDialog.Designer.cs">
       <DependentUpon>ChooseDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="readingQuestion.cs" />
     <Compile Include="config\SystemConfig.cs" />
     <Compile Include="dataclass\DatabaseHelp.cs" />
     <Compile Include="Form1.cs">

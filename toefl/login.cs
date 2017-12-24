@@ -23,6 +23,7 @@ namespace toefl
         {
             register register_form = new register();
             register_form.ShowDialog();
+
         }
 
         //退出事件
@@ -48,6 +49,7 @@ namespace toefl
                 SystemConfig.acc = DatabaseHelp.convert(SystemConfig.acc, reader["acc"]);
                 SystemConfig.time = DatabaseHelp.convert(SystemConfig.time, reader["time"]);
                 SystemConfig.question_num = DatabaseHelp.convert(SystemConfig.question_num, reader["question_num"]);
+                reader.Close();
                 DialogResult = DialogResult.OK;
             }
             else

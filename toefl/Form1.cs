@@ -86,7 +86,8 @@ namespace toefl
 
         private void tpo_Click(object sender, EventArgs e)
         {
-            ChooseDialog Dialog_form = new ChooseDialog();
+            int tpoNo = Convert.ToInt32((sender as Button).Name.Replace("tpo_button",""));
+            ChooseDialog Dialog_form = new ChooseDialog(tpoNo);
            // this.Hide();
             Dialog_form.ShowDialog();
             //this.Show();
