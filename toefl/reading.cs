@@ -15,6 +15,7 @@ namespace toefl
     {
         private float X;
         private float Y;
+        //for model1
         private article arti;
         private int nownum;
         private readingQuestion[] rq;
@@ -84,12 +85,43 @@ namespace toefl
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            if (this.model == 1) {
+                this.nownum += 1;
+                button3.Enabled = true;
+                if (this.nownum == this.arti.questionnum-1)
+                {
+                    button4.Enabled = false;
+                }
+                load_left_ins();
+                return;
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (this.model == 1)
+            {
+                this.nownum -= 1;
+                button4.Enabled = true;
+                if (this.nownum == 1)
+                {
+                    button3.Enabled = false;
+                }
+                load_left_ins();
+                return;
+            }
+        }
 
+        private string ProString(string x)
+        {
+            int i;
+            int length = x.Length;
+            for (i = 0; 15 * i < length; i++)
+            {
+                x=x.Insert(i + 15 * (i + 1), "\n");
+            }
+            return x;
         }
 
         private void load_left_ins()
@@ -108,6 +140,20 @@ namespace toefl
                 checkBox5.Visible = false;
                 checkBox6.Visible = false;
 
+            }else if (this.rq[this.nownum].opnum == 6)
+            {
+                checkBox1.Text = "A:  " + this.rq[this.nownum].optionx[0];
+                checkBox2.Text = "B:  " + this.rq[this.nownum].optionx[1];
+                checkBox3.Text = "C:  " + this.rq[this.nownum].optionx[2];
+                checkBox4.Text = "D:  " + this.rq[this.nownum].optionx[3];
+                checkBox3.Text = "E:  " + this.rq[this.nownum].optionx[4];
+                checkBox4.Text = "F:  " + this.rq[this.nownum].optionx[5];
+                checkBox1.Visible = true;
+                checkBox2.Visible = true;
+                checkBox3.Visible = true;
+                checkBox4.Visible = true;
+                checkBox5.Visible = true;
+                checkBox6.Visible = true;
             }
         }
 
@@ -122,7 +168,8 @@ namespace toefl
             {
                 MessageBox.Show("本篇阅读尚未导入，敬请期待！");
                 DialogResult = DialogResult.Cancel;
-
+                this.Show();
+                return;
             }
             if (result != 0)//把数据存起来
             {
