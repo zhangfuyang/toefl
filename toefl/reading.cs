@@ -22,6 +22,7 @@ namespace toefl
         private string[] studentAnswers;
         private int model;
         private int artnumber;
+        private TimeSpan leftTime;
         public reading(int model,int parm)
         {
             InitializeComponent();
@@ -288,6 +289,9 @@ namespace toefl
             button3.Enabled = false;
             this.nownum = 0;
             load_left_ins();
+            this.timer1.Enabled = true;
+            this.leftTime=TimeSpan.Parse("0:0:40");
+            this.label1.Text = this.leftTime.ToString();
             this.Show();
         }
 
@@ -302,7 +306,58 @@ namespace toefl
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-             
+            TimeSpan t = TimeSpan.Parse("0:0:1");
+            if (this.leftTime == TimeSpan.Parse("0:0:0"))
+            {
+                //强制提交
+                return;
+            }
+            if (this.button2.Text != "暂停")
+            {
+                return;
+            }
+            this.leftTime = this.leftTime.Subtract(t);
+            this.label1.Text = this.leftTime.ToString();
+            if (this.leftTime <= TimeSpan.Parse("0:0:30"))
+            {
+                this.label1.ForeColor = Color.Red;
+                if (this.leftTime == TimeSpan.Parse("0:0:30"))
+                {
+                    this.label1.Visible = true;
+                    this.button1.Text = "隐藏时间";
+                }
+            }
+            else
+            {
+                this.label1.ForeColor = Color.Black;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (button2.Text == "暂停")
+            {
+                button2.Text = "继续";
+            }
+            else
+            {
+                button2.Text = "暂停";
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (button1.Text == "隐藏时间")
+            {
+                button1.Text = "显示时间";
+                label1.Visible = false;
+            }
+            else
+            {
+                button1.Text = "隐藏时间";
+                label1.Visible = true;
+            }
+                
         }
     }
 }
