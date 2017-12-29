@@ -19,6 +19,7 @@ namespace toefl
         private article arti;
         private int nownum;
         private readingQuestion[] rq;
+        private string[] studentAnswers;
         private int model;
         private int artnumber;
         public reading(int model,int parm)
@@ -86,11 +87,24 @@ namespace toefl
         private void button4_Click(object sender, EventArgs e)
         {
             if (this.model == 1) {
+                if (nownum == this.arti.questionnum - 1)
+                {
+                    //提交答案
+                    return;
+                }
+                string ans="";
+                ans += checkBox1.Checked ? "A" : "";
+                ans += checkBox2.Checked ? "B" : "";
+                ans += checkBox3.Checked ? "C" : "";
+                ans += checkBox4.Checked ? "D" : "";
+                ans += checkBox5.Checked ? "E" : "";
+                ans += checkBox6.Checked ? "F" : "";
+                this.studentAnswers[nownum] = ans;
                 this.nownum += 1;
                 button3.Enabled = true;
                 if (this.nownum == this.arti.questionnum-1)
                 {
-                    button4.Enabled = false;
+                    button4.Text = "confirm";
                 }
                 load_left_ins();
                 return;
@@ -102,9 +116,17 @@ namespace toefl
         {
             if (this.model == 1)
             {
+                string ans = "";
+                ans += checkBox1.Checked ? "A" : "";
+                ans += checkBox2.Checked ? "B" : "";
+                ans += checkBox3.Checked ? "C" : "";
+                ans += checkBox4.Checked ? "D" : "";
+                ans += checkBox5.Checked ? "E" : "";
+                ans += checkBox6.Checked ? "F" : "";
+                this.studentAnswers[nownum] = ans;
                 this.nownum -= 1;
-                button4.Enabled = true;
-                if (this.nownum == 1)
+                button4.Text = "next";
+                if (this.nownum == 0)
                 {
                     button3.Enabled = false;
                 }
@@ -113,47 +135,92 @@ namespace toefl
             }
         }
 
-        private string ProString(string x)
+        private string ProString(string x,int ra,ref int line)
         {
             int i;
+            int j;
             int length = x.Length;
-            for (i = 0; 15 * i < length; i++)
+            for (i = 0; ra * (i+1) < length; i++)
             {
-                x=x.Insert(i + 15 * (i + 1), "\n");
+                j = i + ra * (i + 1);
+                while(x[j]!=' ' && x[j] != '.' && j<length-1)
+                {
+                    j++;
+                }
+                x =x.Insert(j, "\n");
             }
+            line = i+1;
             return x;
         }
 
         private void load_left_ins()
         {
-            question_label.Text = this.rq[this.nownum].stem;
+            int line = 0;
+            int loc = 12;
+            char x='A';
+            question_label.Text =  ProString((nownum+1).ToString()+":  "+ this.rq[this.nownum].stem,35,ref line);
+            question_label.Location =new Point(40,loc);
+            loc += line * 30+10;
             if (this.rq[this.nownum].opnum == 4)
             {
-                checkBox1.Text = "A:  "+this.rq[this.nownum].optionx[0];
-                checkBox2.Text = "B:  " + this.rq[this.nownum].optionx[1];
-                checkBox3.Text = "C:  " + this.rq[this.nownum].optionx[2];
-                checkBox4.Text = "D:  " + this.rq[this.nownum].optionx[3];
+                checkBox1.Text = "A:  " + ProString( this.rq[this.nownum].optionx[0],40,ref line);
+                checkBox1.Location = new Point(40, loc);
+                loc += line * 20+10;
+                checkBox2.Text = "B:  " + ProString(this.rq[this.nownum].optionx[1],40,ref line);
+                checkBox2.Location = new Point(40, loc);
+                loc += line * 20 + 10;
+                checkBox3.Text = "C:  " + ProString(this.rq[this.nownum].optionx[2],40,ref line);
+                checkBox3.Location = new Point(40, loc);
+                loc += line * 20 + 10;
+                checkBox4.Text = "D:  " + ProString(this.rq[this.nownum].optionx[3],40,ref line);
+                checkBox4.Location = new Point(40, loc);
+                loc += line * 20 + 10;
                 checkBox1.Visible = true;
                 checkBox2.Visible = true;
                 checkBox3.Visible = true;
                 checkBox4.Visible = true;
                 checkBox5.Visible = false;
                 checkBox6.Visible = false;
+                checkBox1.Checked = studentAnswers[this.nownum].Contains('A');
+                checkBox2.Checked = studentAnswers[this.nownum].Contains('B');
+                checkBox3.Checked = studentAnswers[this.nownum].Contains('C');
+                checkBox4.Checked = studentAnswers[this.nownum].Contains('D');
+                checkBox5.Checked = studentAnswers[this.nownum].Contains('E');
+                checkBox6.Checked = studentAnswers[this.nownum].Contains('F');
 
-            }else if (this.rq[this.nownum].opnum == 6)
+            }
+            else if (this.rq[this.nownum].opnum == 6)
             {
-                checkBox1.Text = "A:  " + this.rq[this.nownum].optionx[0];
-                checkBox2.Text = "B:  " + this.rq[this.nownum].optionx[1];
-                checkBox3.Text = "C:  " + this.rq[this.nownum].optionx[2];
-                checkBox4.Text = "D:  " + this.rq[this.nownum].optionx[3];
-                checkBox3.Text = "E:  " + this.rq[this.nownum].optionx[4];
-                checkBox4.Text = "F:  " + this.rq[this.nownum].optionx[5];
+                checkBox1.Text = "A:  " + ProString(this.rq[this.nownum].optionx[0],40, ref line);
+                checkBox1.Location = new Point(40, loc);
+                loc += line * 20 + 10;
+                checkBox2.Text = "B:  " + ProString(this.rq[this.nownum].optionx[1],40, ref line);
+                checkBox2.Location = new Point(40, loc);
+                loc += line * 20 + 10;
+                checkBox3.Text = "C:  " + ProString(this.rq[this.nownum].optionx[2],40, ref line);
+                checkBox3.Location = new Point(40, loc);
+                loc += line * 20 + 10;
+                checkBox4.Text = "D:  " + ProString(this.rq[this.nownum].optionx[3],40, ref line);
+                checkBox4.Location = new Point(40, loc);
+                loc += line * 20 + 10;
+                checkBox5.Text = "E:  " + ProString(this.rq[this.nownum].optionx[4],40, ref line);
+                checkBox5.Location = new Point(40, loc);
+                loc += line * 20 + 10;
+                checkBox6.Text = "F:  " + ProString(this.rq[this.nownum].optionx[5],40, ref line);
+                checkBox6.Location = new Point(40, loc);
+                loc += line * 20 + 10;
                 checkBox1.Visible = true;
                 checkBox2.Visible = true;
                 checkBox3.Visible = true;
                 checkBox4.Visible = true;
                 checkBox5.Visible = true;
                 checkBox6.Visible = true;
+                checkBox1.Checked = studentAnswers[this.nownum].Contains('A');
+                checkBox2.Checked = studentAnswers[this.nownum].Contains('B');
+                checkBox3.Checked = studentAnswers[this.nownum].Contains('C');
+                checkBox4.Checked = studentAnswers[this.nownum].Contains('D');
+                checkBox5.Checked = studentAnswers[this.nownum].Contains('E');
+                checkBox6.Checked = studentAnswers[this.nownum].Contains('F');
             }
         }
 
@@ -187,8 +254,10 @@ namespace toefl
                 reader.Close();
             }
             this.rq = new readingQuestion[this.arti.questionnum];
+            this.studentAnswers = new string[this.arti.questionnum];
             for (int i= 0;i< this.arti.questionnum; i++)
             {
+                studentAnswers[i] = "";
                 sql = "SELECT * FROM [dbo].[ReadingQuestion] WHERE id="+this.arti.questionIds[i];
                 SqlDataReader reader = DatabaseHelp.getReader(sql);
                 reader.Read();
@@ -200,6 +269,8 @@ namespace toefl
                 this.rq[i].type = DatabaseHelp.convert(this.rq[i].type, reader["type"]);
                 this.rq[i].stem = DatabaseHelp.convert(this.rq[i].stem, reader["stem"]);
                 this.rq[i].opnum= DatabaseHelp.convert(this.rq[i].opnum, reader["opnum"]);
+                this.rq[i].paragraph = DatabaseHelp.convert(this.rq[i].paragraph, reader["paragraph"]);
+                this.rq[i].paragraph2 = DatabaseHelp.convert(this.rq[i].paragraph2, reader["paragraph2"]);
                 this.rq[i].optionx = new string[this.rq[i].opnum];
                 for(int j=0;j< this.rq[i].opnum; j++)
                 {
@@ -227,6 +298,11 @@ namespace toefl
             {
                 load4model1();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }

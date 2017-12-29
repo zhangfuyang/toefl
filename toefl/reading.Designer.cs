@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.button5 = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.question_label = new System.Windows.Forms.Label();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -113,7 +115,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(107, 36);
             this.button5.TabIndex = 5;
-            this.button5.Text = "view text";
+            this.button5.Text = "answers";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -250,11 +252,11 @@
             // question_label
             // 
             this.question_label.AutoSize = true;
-            this.question_label.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.question_label.Location = new System.Drawing.Point(64, 10);
+            this.question_label.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.question_label.Location = new System.Drawing.Point(38, 12);
             this.question_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.question_label.Name = "question_label";
-            this.question_label.Size = new System.Drawing.Size(249, 40);
+            this.question_label.Size = new System.Drawing.Size(247, 38);
             this.question_label.TabIndex = 0;
             this.question_label.Text = "题目XXXXXXXXXXXXXXXXXXXX\r\nXXXXXXXXXXXXXXXXXX";
             // 
@@ -267,6 +269,11 @@
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(503, 582);
             this.webBrowser1.TabIndex = 0;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // reading
             // 
@@ -313,5 +320,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.Timer timer1;
     }
 }
