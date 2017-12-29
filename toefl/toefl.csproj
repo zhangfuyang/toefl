@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ansList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ansList.Designer.cs">
+      <DependentUpon>ansList.cs</DependentUpon>
+    </Compile>
     <Compile Include="article.cs" />
     <Compile Include="ChooseDialog.cs">
       <SubType>Form</SubType>
@@ -101,6 +107,9 @@
     <Compile Include="write.Designer.cs">
       <DependentUpon>write.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ansList.resx">
+      <DependentUpon>ansList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChooseDialog.resx">
       <DependentUpon>ChooseDialog.cs</DependentUpon>
     </EmbeddedResource>
