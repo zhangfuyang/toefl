@@ -65,17 +65,17 @@
             // index
             // 
             this.index.Text = "题号";
-            this.index.Width = 219;
+            this.index.Width = 100;
             // 
             // question
             // 
             this.question.Text = "问题";
-            this.question.Width = 1045;
+            this.question.Width = 500;
             // 
             // ans
             // 
             this.ans.Text = "回答";
-            this.ans.Width = 392;
+            this.ans.Width = 100;
             // 
             // ansList
             // 
