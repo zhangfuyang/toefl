@@ -77,7 +77,7 @@
             // ans
             // 
             this.ans.Text = "回答";
-            this.ans.Width = 392;
+            this.ans.Width = 100;
             // 
             // ansList
             // 
