@@ -120,5 +120,20 @@ namespace toefl
         {
             return richTextBox1.Text.Split(new Char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult submitWindowsBox = MessageBox.Show("是否确定提交", "提示信息", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (submitWindowsBox == DialogResult.Yes)
+            {
+                //写入数据库
+                string sql = "insert into IndWritingAns (name, date, id, ans) values('" + SystemConfig.name + "', '" + DateTime.Now.ToString() + "', " + tpo.ToString() + ", '" + richTextBox1.Text.Replace("'","''") + "')";
+                if (DatabaseHelp.executeCommand(sql) == 0)
+                    MessageBox.Show("保存出现问题，请联系管理员!");
+                else
+                    MessageBox.Show("保存成功!");
+                DialogResult = DialogResult.OK;
+            }
+        }
     }
 }
