@@ -16,5 +16,10 @@ namespace toefl
         {
             InitializeComponent();
         }
+
+        private void ansList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

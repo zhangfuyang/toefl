@@ -42,8 +42,9 @@
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1712, 1118);
+            this.panel1.Size = new System.Drawing.Size(913, 559);
             this.panel1.TabIndex = 0;
             // 
             // listView1
@@ -56,8 +57,9 @@
             this.listView1.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1712, 1118);
+            this.listView1.Size = new System.Drawing.Size(913, 559);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -65,12 +67,12 @@
             // index
             // 
             this.index.Text = "题号";
-            this.index.Width = 219;
+            this.index.Width = 100;
             // 
             // question
             // 
             this.question.Text = "问题";
-            this.question.Width = 1045;
+            this.question.Width = 500;
             // 
             // ans
             // 
@@ -79,13 +81,15 @@
             // 
             // ansList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1712, 1118);
+            this.ClientSize = new System.Drawing.Size(913, 559);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ansList";
             this.Text = "ansList";
+            this.Load += new System.EventHandler(this.ansList_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
