@@ -134,8 +134,7 @@ namespace toefl
                     MessageBox.Show("保存成功!");
                 DialogResult = DialogResult.OK;
             }
-            ansList xxx = new ansList();
-            xxx.ShowDialog();
+            //xxx.ShowDialog();
         }
     }
 }

@@ -77,6 +77,7 @@ namespace toefl
         private void reading_Click(object sender, EventArgs e)
         {
             int artnumber=this.tpoNo*3-3+ Convert.ToInt32((sender as Button).Name.Replace("button", ""));
+            //上面这句要改！改成sql语句
             reading read_form = new reading(1,artnumber);
             read_form.ShowDialog();
         }
