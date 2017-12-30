@@ -34,6 +34,25 @@ namespace toefl
                 return connection;
             }
         }
+        public static void ExecuteProc(string xmlstr, string proc)
+        {
+            
+            SqlCommand testcmd = new SqlCommand();
+            testcmd.Connection = connection;
+            
+            try
+            {
+                testcmd.CommandType = CommandType.StoredProcedure;
+                testcmd.CommandText = proc;
+                testcmd.Parameters.Add("@xml", SqlDbType.VarChar, -1).Value = xmlstr;
+                testcmd.ExecuteNonQuery();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+
+        }
 
         //通过SQL语句和条件增删改一条数据
         public static int executeCommand(string sql)

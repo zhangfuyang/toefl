@@ -9,6 +9,7 @@ namespace toefl
     public static class SystemConfig
     {
         public static bool login = false;
+        public static bool authority; //true为管理员
         public static String name;
         public static String email;
         public static String password;
