@@ -46,6 +46,7 @@
             this.question_label = new System.Windows.Forms.Label();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -86,6 +87,7 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.button6);
             this.splitContainer2.Panel1.Controls.Add(this.button5);
             this.splitContainer2.Panel1.Controls.Add(this.button4);
             this.splitContainer2.Panel1.Controls.Add(this.button3);
@@ -279,6 +281,16 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(333, 6);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(87, 21);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "确定";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // reading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -325,5 +337,6 @@
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button6;
     }
 }

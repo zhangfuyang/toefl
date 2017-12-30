@@ -34,5 +34,11 @@ namespace toefl
             Series_Form.ShowDialog();
             this.Close();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            reading rd = new reading(2,this.tpoNo);
+            rd.ShowDialog();
+        }
     }
 }

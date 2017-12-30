@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace toefl
 {
-    class readingQuestion
+    public class readingQuestion
     {
         public int id;
         public int articleid;

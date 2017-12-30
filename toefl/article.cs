@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace toefl
 {
-    class article
+    public class article
     {
         public int no=0;
         public string content="";
