@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addTpo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addTpo.Designer.cs">
+      <DependentUpon>addTpo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ansList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <Compile Include="write.Designer.cs">
       <DependentUpon>write.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addTpo.resx">
+      <DependentUpon>addTpo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ansList.resx">
       <DependentUpon>ansList.cs</DependentUpon>
     </EmbeddedResource>

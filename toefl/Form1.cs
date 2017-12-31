@@ -128,5 +128,24 @@ namespace toefl
             //链接到reading界面
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (SystemConfig.name == "admin")
+            {
+                SystemConfig.authority = true;
+                this.panel1.ContextMenuStrip = this.contextMenuStrip1;
+            }
+            else
+                SystemConfig.authority = false;
+
+        }
+
+        private void addtpoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addTpo addTpo_form = new addTpo();
+            this.Hide();
+            addTpo_form.ShowDialog();
+            this.Show();
+        }
     }
 }

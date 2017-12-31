@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -57,17 +58,57 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.comTpo20 = new System.Windows.Forms.Button();
+            this.comTpo19 = new System.Windows.Forms.Button();
+            this.comTpo18 = new System.Windows.Forms.Button();
+            this.comTpo17 = new System.Windows.Forms.Button();
+            this.comTpo16 = new System.Windows.Forms.Button();
+            this.comTpo15 = new System.Windows.Forms.Button();
+            this.comTpo14 = new System.Windows.Forms.Button();
+            this.comTpo13 = new System.Windows.Forms.Button();
+            this.comTpo12 = new System.Windows.Forms.Button();
+            this.comTpo11 = new System.Windows.Forms.Button();
+            this.comTpo10 = new System.Windows.Forms.Button();
+            this.comTpo9 = new System.Windows.Forms.Button();
+            this.comTpo8 = new System.Windows.Forms.Button();
+            this.comTpo7 = new System.Windows.Forms.Button();
+            this.comTpo6 = new System.Windows.Forms.Button();
+            this.comTpo5 = new System.Windows.Forms.Button();
+            this.comTpo4 = new System.Windows.Forms.Button();
+            this.comTpo3 = new System.Windows.Forms.Button();
+            this.comTpo2 = new System.Windows.Forms.Button();
+            this.comTpo1 = new System.Windows.Forms.Button();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.indTpo20 = new System.Windows.Forms.Button();
+            this.indTpo19 = new System.Windows.Forms.Button();
+            this.indTpo18 = new System.Windows.Forms.Button();
+            this.indTpo17 = new System.Windows.Forms.Button();
+            this.indTpo16 = new System.Windows.Forms.Button();
+            this.indTpo15 = new System.Windows.Forms.Button();
+            this.indTpo14 = new System.Windows.Forms.Button();
+            this.indTpo13 = new System.Windows.Forms.Button();
+            this.indTpo12 = new System.Windows.Forms.Button();
+            this.indTpo11 = new System.Windows.Forms.Button();
+            this.indTpo10 = new System.Windows.Forms.Button();
+            this.indTpo9 = new System.Windows.Forms.Button();
+            this.indTpo8 = new System.Windows.Forms.Button();
+            this.indTpo7 = new System.Windows.Forms.Button();
+            this.indTpo6 = new System.Windows.Forms.Button();
+            this.indTpo5 = new System.Windows.Forms.Button();
+            this.indTpo4 = new System.Windows.Forms.Button();
+            this.indTpo3 = new System.Windows.Forms.Button();
+            this.indTpo2 = new System.Windows.Forms.Button();
+            this.indTpo1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -76,8 +117,9 @@
             this.study_label = new System.Windows.Forms.Label();
             this.split_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addtpoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edittpoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -90,20 +132,23 @@
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -133,7 +178,7 @@
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1405, 1106);
@@ -144,9 +189,9 @@
             this.tabPage1.AutoScroll = true;
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Location = new System.Drawing.Point(10, 48);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1385, 1048);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "主页";
@@ -177,7 +222,7 @@
             this.panel1.Controls.Add(this.tpo_button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1377, 1040);
             this.panel1.TabIndex = 0;
@@ -185,7 +230,7 @@
             // tpo_button20
             // 
             this.tpo_button20.Location = new System.Drawing.Point(497, 1352);
-            this.tpo_button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button20.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button20.Name = "tpo_button20";
             this.tpo_button20.Size = new System.Drawing.Size(274, 122);
             this.tpo_button20.TabIndex = 39;
@@ -196,7 +241,7 @@
             // tpo_button19
             // 
             this.tpo_button19.Location = new System.Drawing.Point(77, 1352);
-            this.tpo_button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button19.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button19.Name = "tpo_button19";
             this.tpo_button19.Size = new System.Drawing.Size(274, 122);
             this.tpo_button19.TabIndex = 38;
@@ -207,7 +252,7 @@
             // tpo_button18
             // 
             this.tpo_button18.Location = new System.Drawing.Point(943, 1116);
-            this.tpo_button18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button18.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button18.Name = "tpo_button18";
             this.tpo_button18.Size = new System.Drawing.Size(274, 122);
             this.tpo_button18.TabIndex = 37;
@@ -218,7 +263,7 @@
             // tpo_button17
             // 
             this.tpo_button17.Location = new System.Drawing.Point(497, 1116);
-            this.tpo_button17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button17.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button17.Name = "tpo_button17";
             this.tpo_button17.Size = new System.Drawing.Size(274, 122);
             this.tpo_button17.TabIndex = 36;
@@ -229,7 +274,7 @@
             // tpo_button16
             // 
             this.tpo_button16.Location = new System.Drawing.Point(77, 1116);
-            this.tpo_button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button16.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button16.Name = "tpo_button16";
             this.tpo_button16.Size = new System.Drawing.Size(274, 122);
             this.tpo_button16.TabIndex = 35;
@@ -240,7 +285,7 @@
             // tpo_button15
             // 
             this.tpo_button15.Location = new System.Drawing.Point(943, 896);
-            this.tpo_button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button15.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button15.Name = "tpo_button15";
             this.tpo_button15.Size = new System.Drawing.Size(274, 122);
             this.tpo_button15.TabIndex = 34;
@@ -251,7 +296,7 @@
             // tpo_button14
             // 
             this.tpo_button14.Location = new System.Drawing.Point(497, 896);
-            this.tpo_button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button14.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button14.Name = "tpo_button14";
             this.tpo_button14.Size = new System.Drawing.Size(274, 122);
             this.tpo_button14.TabIndex = 33;
@@ -262,7 +307,7 @@
             // tpo_button13
             // 
             this.tpo_button13.Location = new System.Drawing.Point(77, 896);
-            this.tpo_button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button13.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button13.Name = "tpo_button13";
             this.tpo_button13.Size = new System.Drawing.Size(274, 122);
             this.tpo_button13.TabIndex = 32;
@@ -273,7 +318,7 @@
             // tpo_button12
             // 
             this.tpo_button12.Location = new System.Drawing.Point(943, 684);
-            this.tpo_button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button12.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button12.Name = "tpo_button12";
             this.tpo_button12.Size = new System.Drawing.Size(274, 122);
             this.tpo_button12.TabIndex = 31;
@@ -284,7 +329,7 @@
             // tpo_button11
             // 
             this.tpo_button11.Location = new System.Drawing.Point(497, 684);
-            this.tpo_button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button11.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button11.Name = "tpo_button11";
             this.tpo_button11.Size = new System.Drawing.Size(274, 122);
             this.tpo_button11.TabIndex = 30;
@@ -295,7 +340,7 @@
             // tpo_button10
             // 
             this.tpo_button10.Location = new System.Drawing.Point(77, 684);
-            this.tpo_button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button10.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button10.Name = "tpo_button10";
             this.tpo_button10.Size = new System.Drawing.Size(274, 122);
             this.tpo_button10.TabIndex = 29;
@@ -306,7 +351,7 @@
             // tpo_button9
             // 
             this.tpo_button9.Location = new System.Drawing.Point(943, 456);
-            this.tpo_button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button9.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button9.Name = "tpo_button9";
             this.tpo_button9.Size = new System.Drawing.Size(274, 122);
             this.tpo_button9.TabIndex = 28;
@@ -317,7 +362,7 @@
             // tpo_button8
             // 
             this.tpo_button8.Location = new System.Drawing.Point(497, 456);
-            this.tpo_button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button8.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button8.Name = "tpo_button8";
             this.tpo_button8.Size = new System.Drawing.Size(274, 122);
             this.tpo_button8.TabIndex = 27;
@@ -328,7 +373,7 @@
             // tpo_button7
             // 
             this.tpo_button7.Location = new System.Drawing.Point(77, 456);
-            this.tpo_button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button7.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button7.Name = "tpo_button7";
             this.tpo_button7.Size = new System.Drawing.Size(274, 122);
             this.tpo_button7.TabIndex = 26;
@@ -339,7 +384,7 @@
             // tpo_button6
             // 
             this.tpo_button6.Location = new System.Drawing.Point(943, 236);
-            this.tpo_button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button6.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button6.Name = "tpo_button6";
             this.tpo_button6.Size = new System.Drawing.Size(274, 122);
             this.tpo_button6.TabIndex = 25;
@@ -350,7 +395,7 @@
             // tpo_button5
             // 
             this.tpo_button5.Location = new System.Drawing.Point(497, 236);
-            this.tpo_button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button5.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button5.Name = "tpo_button5";
             this.tpo_button5.Size = new System.Drawing.Size(274, 122);
             this.tpo_button5.TabIndex = 24;
@@ -361,7 +406,7 @@
             // tpo_button4
             // 
             this.tpo_button4.Location = new System.Drawing.Point(77, 236);
-            this.tpo_button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button4.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button4.Name = "tpo_button4";
             this.tpo_button4.Size = new System.Drawing.Size(274, 122);
             this.tpo_button4.TabIndex = 23;
@@ -372,7 +417,7 @@
             // tpo_button3
             // 
             this.tpo_button3.Location = new System.Drawing.Point(943, 18);
-            this.tpo_button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button3.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button3.Name = "tpo_button3";
             this.tpo_button3.Size = new System.Drawing.Size(274, 122);
             this.tpo_button3.TabIndex = 22;
@@ -383,7 +428,7 @@
             // tpo_button2
             // 
             this.tpo_button2.Location = new System.Drawing.Point(497, 18);
-            this.tpo_button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button2.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button2.Name = "tpo_button2";
             this.tpo_button2.Size = new System.Drawing.Size(274, 122);
             this.tpo_button2.TabIndex = 21;
@@ -394,7 +439,7 @@
             // tpo_button1
             // 
             this.tpo_button1.Location = new System.Drawing.Point(77, 18);
-            this.tpo_button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpo_button1.Margin = new System.Windows.Forms.Padding(4);
             this.tpo_button1.Name = "tpo_button1";
             this.tpo_button1.Size = new System.Drawing.Size(274, 122);
             this.tpo_button1.TabIndex = 20;
@@ -407,9 +452,9 @@
             this.tabPage2.AutoScroll = true;
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Location = new System.Drawing.Point(10, 48);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1385, 1048);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "阅读";
@@ -420,7 +465,7 @@
             this.panel2.Controls.Add(this.tabControl2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(4, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1377, 1040);
             this.panel2.TabIndex = 0;
@@ -428,11 +473,10 @@
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(1377, 1040);
@@ -442,72 +486,88 @@
             // 
             this.tabPage4.Controls.Add(this.panel3);
             this.tabPage4.Location = new System.Drawing.Point(10, 48);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage4.Size = new System.Drawing.Size(1357, 982);
             this.tabPage4.TabIndex = 0;
-            this.tabPage4.Text = "整篇练习";
+            this.tabPage4.Text = "学科练习";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(4, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel3.Margin = new System.Windows.Forms.Padding(6);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1349, 974);
             this.panel3.TabIndex = 0;
             // 
-            // tabPage5
+            // comboBox1
             // 
-            this.tabPage5.Controls.Add(this.panel4);
-            this.tabPage5.Location = new System.Drawing.Point(10, 48);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage5.Size = new System.Drawing.Size(1341, 924);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "学科练习";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(4, 4);
-            this.panel4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1333, 916);
-            this.panel4.TabIndex = 0;
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox1.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "社会",
+            "生活",
+            "校园",
+            "海洋",
+            "地理"});
+            this.comboBox1.Location = new System.Drawing.Point(0, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(1349, 68);
+            this.comboBox1.TabIndex = 0;
             // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.panel5);
             this.tabPage6.Location = new System.Drawing.Point(10, 48);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1341, 924);
+            this.tabPage6.Size = new System.Drawing.Size(1357, 982);
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "题型练习";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.comboBox2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel5.Margin = new System.Windows.Forms.Padding(6);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1341, 924);
+            this.panel5.Size = new System.Drawing.Size(1357, 982);
             this.panel5.TabIndex = 0;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox2.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "词汇题",
+            "否定事实信息题",
+            "事实信息题",
+            "句子插入题",
+            "修辞目的题",
+            "推理题",
+            "概要小结题",
+            "句子简化题",
+            "组织结构题",
+            "指代题"});
+            this.comboBox2.Location = new System.Drawing.Point(0, 0);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(1357, 68);
+            this.comboBox2.TabIndex = 1;
             // 
             // tabPage3
             // 
             this.tabPage3.AutoScroll = true;
             this.tabPage3.Controls.Add(this.panel6);
             this.tabPage3.Location = new System.Drawing.Point(10, 48);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1385, 1048);
             this.tabPage3.TabIndex = 2;
@@ -519,7 +579,7 @@
             this.panel6.Controls.Add(this.tabControl3);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel6.Margin = new System.Windows.Forms.Padding(6);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1385, 1048);
             this.panel6.TabIndex = 0;
@@ -530,7 +590,7 @@
             this.tabControl3.Controls.Add(this.tabPage8);
             this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl3.Location = new System.Drawing.Point(0, 0);
-            this.tabControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl3.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
             this.tabControl3.Size = new System.Drawing.Size(1385, 1048);
@@ -540,9 +600,9 @@
             // 
             this.tabPage7.Controls.Add(this.panel7);
             this.tabPage7.Location = new System.Drawing.Point(10, 48);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage7.Size = new System.Drawing.Size(1365, 990);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "综合写作";
@@ -550,33 +610,475 @@
             // 
             // panel7
             // 
+            this.panel7.AutoScroll = true;
+            this.panel7.Controls.Add(this.comTpo20);
+            this.panel7.Controls.Add(this.comTpo19);
+            this.panel7.Controls.Add(this.comTpo18);
+            this.panel7.Controls.Add(this.comTpo17);
+            this.panel7.Controls.Add(this.comTpo16);
+            this.panel7.Controls.Add(this.comTpo15);
+            this.panel7.Controls.Add(this.comTpo14);
+            this.panel7.Controls.Add(this.comTpo13);
+            this.panel7.Controls.Add(this.comTpo12);
+            this.panel7.Controls.Add(this.comTpo11);
+            this.panel7.Controls.Add(this.comTpo10);
+            this.panel7.Controls.Add(this.comTpo9);
+            this.panel7.Controls.Add(this.comTpo8);
+            this.panel7.Controls.Add(this.comTpo7);
+            this.panel7.Controls.Add(this.comTpo6);
+            this.panel7.Controls.Add(this.comTpo5);
+            this.panel7.Controls.Add(this.comTpo4);
+            this.panel7.Controls.Add(this.comTpo3);
+            this.panel7.Controls.Add(this.comTpo2);
+            this.panel7.Controls.Add(this.comTpo1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(4, 4);
-            this.panel7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel7.Margin = new System.Windows.Forms.Padding(6);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1357, 982);
             this.panel7.TabIndex = 0;
+            // 
+            // comTpo20
+            // 
+            this.comTpo20.Location = new System.Drawing.Point(503, 1384);
+            this.comTpo20.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo20.Name = "comTpo20";
+            this.comTpo20.Size = new System.Drawing.Size(274, 122);
+            this.comTpo20.TabIndex = 59;
+            this.comTpo20.Text = "tpo20";
+            this.comTpo20.UseVisualStyleBackColor = true;
+            // 
+            // comTpo19
+            // 
+            this.comTpo19.Location = new System.Drawing.Point(83, 1384);
+            this.comTpo19.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo19.Name = "comTpo19";
+            this.comTpo19.Size = new System.Drawing.Size(274, 122);
+            this.comTpo19.TabIndex = 58;
+            this.comTpo19.Text = "tpo19";
+            this.comTpo19.UseVisualStyleBackColor = true;
+            // 
+            // comTpo18
+            // 
+            this.comTpo18.Location = new System.Drawing.Point(949, 1148);
+            this.comTpo18.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo18.Name = "comTpo18";
+            this.comTpo18.Size = new System.Drawing.Size(274, 122);
+            this.comTpo18.TabIndex = 57;
+            this.comTpo18.Text = "tpo18";
+            this.comTpo18.UseVisualStyleBackColor = true;
+            // 
+            // comTpo17
+            // 
+            this.comTpo17.Location = new System.Drawing.Point(503, 1148);
+            this.comTpo17.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo17.Name = "comTpo17";
+            this.comTpo17.Size = new System.Drawing.Size(274, 122);
+            this.comTpo17.TabIndex = 56;
+            this.comTpo17.Text = "tpo17";
+            this.comTpo17.UseVisualStyleBackColor = true;
+            // 
+            // comTpo16
+            // 
+            this.comTpo16.Location = new System.Drawing.Point(83, 1148);
+            this.comTpo16.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo16.Name = "comTpo16";
+            this.comTpo16.Size = new System.Drawing.Size(274, 122);
+            this.comTpo16.TabIndex = 55;
+            this.comTpo16.Text = "tpo16";
+            this.comTpo16.UseVisualStyleBackColor = true;
+            // 
+            // comTpo15
+            // 
+            this.comTpo15.Location = new System.Drawing.Point(949, 928);
+            this.comTpo15.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo15.Name = "comTpo15";
+            this.comTpo15.Size = new System.Drawing.Size(274, 122);
+            this.comTpo15.TabIndex = 54;
+            this.comTpo15.Text = "tpo15";
+            this.comTpo15.UseVisualStyleBackColor = true;
+            // 
+            // comTpo14
+            // 
+            this.comTpo14.Location = new System.Drawing.Point(503, 928);
+            this.comTpo14.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo14.Name = "comTpo14";
+            this.comTpo14.Size = new System.Drawing.Size(274, 122);
+            this.comTpo14.TabIndex = 53;
+            this.comTpo14.Text = "tpo14";
+            this.comTpo14.UseVisualStyleBackColor = true;
+            // 
+            // comTpo13
+            // 
+            this.comTpo13.Location = new System.Drawing.Point(83, 928);
+            this.comTpo13.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo13.Name = "comTpo13";
+            this.comTpo13.Size = new System.Drawing.Size(274, 122);
+            this.comTpo13.TabIndex = 52;
+            this.comTpo13.Text = "tpo13";
+            this.comTpo13.UseVisualStyleBackColor = true;
+            // 
+            // comTpo12
+            // 
+            this.comTpo12.Location = new System.Drawing.Point(949, 716);
+            this.comTpo12.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo12.Name = "comTpo12";
+            this.comTpo12.Size = new System.Drawing.Size(274, 122);
+            this.comTpo12.TabIndex = 51;
+            this.comTpo12.Text = "tpo12";
+            this.comTpo12.UseVisualStyleBackColor = true;
+            // 
+            // comTpo11
+            // 
+            this.comTpo11.Location = new System.Drawing.Point(503, 716);
+            this.comTpo11.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo11.Name = "comTpo11";
+            this.comTpo11.Size = new System.Drawing.Size(274, 122);
+            this.comTpo11.TabIndex = 50;
+            this.comTpo11.Text = "tpo11";
+            this.comTpo11.UseVisualStyleBackColor = true;
+            // 
+            // comTpo10
+            // 
+            this.comTpo10.Location = new System.Drawing.Point(83, 716);
+            this.comTpo10.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo10.Name = "comTpo10";
+            this.comTpo10.Size = new System.Drawing.Size(274, 122);
+            this.comTpo10.TabIndex = 49;
+            this.comTpo10.Text = "tpo10";
+            this.comTpo10.UseVisualStyleBackColor = true;
+            // 
+            // comTpo9
+            // 
+            this.comTpo9.Location = new System.Drawing.Point(949, 488);
+            this.comTpo9.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo9.Name = "comTpo9";
+            this.comTpo9.Size = new System.Drawing.Size(274, 122);
+            this.comTpo9.TabIndex = 48;
+            this.comTpo9.Text = "tpo9";
+            this.comTpo9.UseVisualStyleBackColor = true;
+            // 
+            // comTpo8
+            // 
+            this.comTpo8.Location = new System.Drawing.Point(503, 488);
+            this.comTpo8.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo8.Name = "comTpo8";
+            this.comTpo8.Size = new System.Drawing.Size(274, 122);
+            this.comTpo8.TabIndex = 47;
+            this.comTpo8.Text = "tpo8";
+            this.comTpo8.UseVisualStyleBackColor = true;
+            // 
+            // comTpo7
+            // 
+            this.comTpo7.Location = new System.Drawing.Point(83, 488);
+            this.comTpo7.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo7.Name = "comTpo7";
+            this.comTpo7.Size = new System.Drawing.Size(274, 122);
+            this.comTpo7.TabIndex = 46;
+            this.comTpo7.Text = "tpo7";
+            this.comTpo7.UseVisualStyleBackColor = true;
+            // 
+            // comTpo6
+            // 
+            this.comTpo6.Location = new System.Drawing.Point(949, 268);
+            this.comTpo6.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo6.Name = "comTpo6";
+            this.comTpo6.Size = new System.Drawing.Size(274, 122);
+            this.comTpo6.TabIndex = 45;
+            this.comTpo6.Text = "tpo6";
+            this.comTpo6.UseVisualStyleBackColor = true;
+            // 
+            // comTpo5
+            // 
+            this.comTpo5.Location = new System.Drawing.Point(503, 268);
+            this.comTpo5.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo5.Name = "comTpo5";
+            this.comTpo5.Size = new System.Drawing.Size(274, 122);
+            this.comTpo5.TabIndex = 44;
+            this.comTpo5.Text = "tpo5";
+            this.comTpo5.UseVisualStyleBackColor = true;
+            // 
+            // comTpo4
+            // 
+            this.comTpo4.Location = new System.Drawing.Point(83, 268);
+            this.comTpo4.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo4.Name = "comTpo4";
+            this.comTpo4.Size = new System.Drawing.Size(274, 122);
+            this.comTpo4.TabIndex = 43;
+            this.comTpo4.Text = "tpo4";
+            this.comTpo4.UseVisualStyleBackColor = true;
+            // 
+            // comTpo3
+            // 
+            this.comTpo3.Location = new System.Drawing.Point(949, 50);
+            this.comTpo3.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo3.Name = "comTpo3";
+            this.comTpo3.Size = new System.Drawing.Size(274, 122);
+            this.comTpo3.TabIndex = 42;
+            this.comTpo3.Text = "tpo3";
+            this.comTpo3.UseVisualStyleBackColor = true;
+            // 
+            // comTpo2
+            // 
+            this.comTpo2.Location = new System.Drawing.Point(503, 50);
+            this.comTpo2.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo2.Name = "comTpo2";
+            this.comTpo2.Size = new System.Drawing.Size(274, 122);
+            this.comTpo2.TabIndex = 41;
+            this.comTpo2.Text = "tpo2";
+            this.comTpo2.UseVisualStyleBackColor = true;
+            // 
+            // comTpo1
+            // 
+            this.comTpo1.Location = new System.Drawing.Point(83, 50);
+            this.comTpo1.Margin = new System.Windows.Forms.Padding(4);
+            this.comTpo1.Name = "comTpo1";
+            this.comTpo1.Size = new System.Drawing.Size(274, 122);
+            this.comTpo1.TabIndex = 40;
+            this.comTpo1.Text = "tpo1";
+            this.comTpo1.UseVisualStyleBackColor = true;
             // 
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.panel8);
             this.tabPage8.Location = new System.Drawing.Point(10, 48);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage8.Size = new System.Drawing.Size(1349, 932);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage8.Size = new System.Drawing.Size(1365, 990);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "独立写作";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // panel8
             // 
+            this.panel8.AutoScroll = true;
+            this.panel8.Controls.Add(this.indTpo20);
+            this.panel8.Controls.Add(this.indTpo19);
+            this.panel8.Controls.Add(this.indTpo18);
+            this.panel8.Controls.Add(this.indTpo17);
+            this.panel8.Controls.Add(this.indTpo16);
+            this.panel8.Controls.Add(this.indTpo15);
+            this.panel8.Controls.Add(this.indTpo14);
+            this.panel8.Controls.Add(this.indTpo13);
+            this.panel8.Controls.Add(this.indTpo12);
+            this.panel8.Controls.Add(this.indTpo11);
+            this.panel8.Controls.Add(this.indTpo10);
+            this.panel8.Controls.Add(this.indTpo9);
+            this.panel8.Controls.Add(this.indTpo8);
+            this.panel8.Controls.Add(this.indTpo7);
+            this.panel8.Controls.Add(this.indTpo6);
+            this.panel8.Controls.Add(this.indTpo5);
+            this.panel8.Controls.Add(this.indTpo4);
+            this.panel8.Controls.Add(this.indTpo3);
+            this.panel8.Controls.Add(this.indTpo2);
+            this.panel8.Controls.Add(this.indTpo1);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(4, 4);
-            this.panel8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel8.Margin = new System.Windows.Forms.Padding(6);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1341, 924);
+            this.panel8.Size = new System.Drawing.Size(1357, 982);
             this.panel8.TabIndex = 0;
+            // 
+            // indTpo20
+            // 
+            this.indTpo20.Location = new System.Drawing.Point(504, 1401);
+            this.indTpo20.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo20.Name = "indTpo20";
+            this.indTpo20.Size = new System.Drawing.Size(274, 122);
+            this.indTpo20.TabIndex = 79;
+            this.indTpo20.Text = "tpo20";
+            this.indTpo20.UseVisualStyleBackColor = true;
+            // 
+            // indTpo19
+            // 
+            this.indTpo19.Location = new System.Drawing.Point(84, 1401);
+            this.indTpo19.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo19.Name = "indTpo19";
+            this.indTpo19.Size = new System.Drawing.Size(274, 122);
+            this.indTpo19.TabIndex = 78;
+            this.indTpo19.Text = "tpo19";
+            this.indTpo19.UseVisualStyleBackColor = true;
+            // 
+            // indTpo18
+            // 
+            this.indTpo18.Location = new System.Drawing.Point(950, 1165);
+            this.indTpo18.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo18.Name = "indTpo18";
+            this.indTpo18.Size = new System.Drawing.Size(274, 122);
+            this.indTpo18.TabIndex = 77;
+            this.indTpo18.Text = "tpo18";
+            this.indTpo18.UseVisualStyleBackColor = true;
+            // 
+            // indTpo17
+            // 
+            this.indTpo17.Location = new System.Drawing.Point(504, 1165);
+            this.indTpo17.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo17.Name = "indTpo17";
+            this.indTpo17.Size = new System.Drawing.Size(274, 122);
+            this.indTpo17.TabIndex = 76;
+            this.indTpo17.Text = "tpo17";
+            this.indTpo17.UseVisualStyleBackColor = true;
+            // 
+            // indTpo16
+            // 
+            this.indTpo16.Location = new System.Drawing.Point(84, 1165);
+            this.indTpo16.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo16.Name = "indTpo16";
+            this.indTpo16.Size = new System.Drawing.Size(274, 122);
+            this.indTpo16.TabIndex = 75;
+            this.indTpo16.Text = "tpo16";
+            this.indTpo16.UseVisualStyleBackColor = true;
+            // 
+            // indTpo15
+            // 
+            this.indTpo15.Location = new System.Drawing.Point(950, 945);
+            this.indTpo15.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo15.Name = "indTpo15";
+            this.indTpo15.Size = new System.Drawing.Size(274, 122);
+            this.indTpo15.TabIndex = 74;
+            this.indTpo15.Text = "tpo15";
+            this.indTpo15.UseVisualStyleBackColor = true;
+            // 
+            // indTpo14
+            // 
+            this.indTpo14.Location = new System.Drawing.Point(504, 945);
+            this.indTpo14.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo14.Name = "indTpo14";
+            this.indTpo14.Size = new System.Drawing.Size(274, 122);
+            this.indTpo14.TabIndex = 73;
+            this.indTpo14.Text = "tpo14";
+            this.indTpo14.UseVisualStyleBackColor = true;
+            // 
+            // indTpo13
+            // 
+            this.indTpo13.Location = new System.Drawing.Point(84, 945);
+            this.indTpo13.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo13.Name = "indTpo13";
+            this.indTpo13.Size = new System.Drawing.Size(274, 122);
+            this.indTpo13.TabIndex = 72;
+            this.indTpo13.Text = "tpo13";
+            this.indTpo13.UseVisualStyleBackColor = true;
+            // 
+            // indTpo12
+            // 
+            this.indTpo12.Location = new System.Drawing.Point(950, 733);
+            this.indTpo12.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo12.Name = "indTpo12";
+            this.indTpo12.Size = new System.Drawing.Size(274, 122);
+            this.indTpo12.TabIndex = 71;
+            this.indTpo12.Text = "tpo12";
+            this.indTpo12.UseVisualStyleBackColor = true;
+            // 
+            // indTpo11
+            // 
+            this.indTpo11.Location = new System.Drawing.Point(504, 733);
+            this.indTpo11.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo11.Name = "indTpo11";
+            this.indTpo11.Size = new System.Drawing.Size(274, 122);
+            this.indTpo11.TabIndex = 70;
+            this.indTpo11.Text = "tpo11";
+            this.indTpo11.UseVisualStyleBackColor = true;
+            // 
+            // indTpo10
+            // 
+            this.indTpo10.Location = new System.Drawing.Point(84, 733);
+            this.indTpo10.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo10.Name = "indTpo10";
+            this.indTpo10.Size = new System.Drawing.Size(274, 122);
+            this.indTpo10.TabIndex = 69;
+            this.indTpo10.Text = "tpo10";
+            this.indTpo10.UseVisualStyleBackColor = true;
+            // 
+            // indTpo9
+            // 
+            this.indTpo9.Location = new System.Drawing.Point(950, 505);
+            this.indTpo9.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo9.Name = "indTpo9";
+            this.indTpo9.Size = new System.Drawing.Size(274, 122);
+            this.indTpo9.TabIndex = 68;
+            this.indTpo9.Text = "tpo9";
+            this.indTpo9.UseVisualStyleBackColor = true;
+            // 
+            // indTpo8
+            // 
+            this.indTpo8.Location = new System.Drawing.Point(504, 505);
+            this.indTpo8.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo8.Name = "indTpo8";
+            this.indTpo8.Size = new System.Drawing.Size(274, 122);
+            this.indTpo8.TabIndex = 67;
+            this.indTpo8.Text = "tpo8";
+            this.indTpo8.UseVisualStyleBackColor = true;
+            // 
+            // indTpo7
+            // 
+            this.indTpo7.Location = new System.Drawing.Point(84, 505);
+            this.indTpo7.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo7.Name = "indTpo7";
+            this.indTpo7.Size = new System.Drawing.Size(274, 122);
+            this.indTpo7.TabIndex = 66;
+            this.indTpo7.Text = "tpo7";
+            this.indTpo7.UseVisualStyleBackColor = true;
+            // 
+            // indTpo6
+            // 
+            this.indTpo6.Location = new System.Drawing.Point(950, 285);
+            this.indTpo6.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo6.Name = "indTpo6";
+            this.indTpo6.Size = new System.Drawing.Size(274, 122);
+            this.indTpo6.TabIndex = 65;
+            this.indTpo6.Text = "tpo6";
+            this.indTpo6.UseVisualStyleBackColor = true;
+            // 
+            // indTpo5
+            // 
+            this.indTpo5.Location = new System.Drawing.Point(504, 285);
+            this.indTpo5.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo5.Name = "indTpo5";
+            this.indTpo5.Size = new System.Drawing.Size(274, 122);
+            this.indTpo5.TabIndex = 64;
+            this.indTpo5.Text = "tpo5";
+            this.indTpo5.UseVisualStyleBackColor = true;
+            // 
+            // indTpo4
+            // 
+            this.indTpo4.Location = new System.Drawing.Point(84, 285);
+            this.indTpo4.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo4.Name = "indTpo4";
+            this.indTpo4.Size = new System.Drawing.Size(274, 122);
+            this.indTpo4.TabIndex = 63;
+            this.indTpo4.Text = "tpo4";
+            this.indTpo4.UseVisualStyleBackColor = true;
+            // 
+            // indTpo3
+            // 
+            this.indTpo3.Location = new System.Drawing.Point(950, 67);
+            this.indTpo3.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo3.Name = "indTpo3";
+            this.indTpo3.Size = new System.Drawing.Size(274, 122);
+            this.indTpo3.TabIndex = 62;
+            this.indTpo3.Text = "tpo3";
+            this.indTpo3.UseVisualStyleBackColor = true;
+            // 
+            // indTpo2
+            // 
+            this.indTpo2.Location = new System.Drawing.Point(504, 67);
+            this.indTpo2.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo2.Name = "indTpo2";
+            this.indTpo2.Size = new System.Drawing.Size(274, 122);
+            this.indTpo2.TabIndex = 61;
+            this.indTpo2.Text = "tpo2";
+            this.indTpo2.UseVisualStyleBackColor = true;
+            // 
+            // indTpo1
+            // 
+            this.indTpo1.Location = new System.Drawing.Point(84, 67);
+            this.indTpo1.Margin = new System.Windows.Forms.Padding(4);
+            this.indTpo1.Name = "indTpo1";
+            this.indTpo1.Size = new System.Drawing.Size(274, 122);
+            this.indTpo1.TabIndex = 60;
+            this.indTpo1.Text = "tpo1";
+            this.indTpo1.UseVisualStyleBackColor = true;
             // 
             // listBox1
             // 
@@ -584,7 +1086,7 @@
             this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 30;
             this.listBox1.Location = new System.Drawing.Point(-6, 588);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(433, 514);
             this.listBox1.TabIndex = 7;
@@ -665,30 +1167,27 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "你好！XXX";
             // 
-            // comboBox1
+            // contextMenuStrip1
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox1.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "社会",
-            "生活",
-            "校园",
-            "海洋",
-            "地理"});
-            this.comboBox1.Location = new System.Drawing.Point(0, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(1349, 68);
-            this.comboBox1.TabIndex = 0;
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addtpoToolStripMenuItem,
+            this.edittpoToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(291, 147);
             // 
-            // button1
+            // addtpoToolStripMenuItem
             // 
-            this.button1.Location = new System.Drawing.Point(362, 376);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(489, 153);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "测试";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addtpoToolStripMenuItem.Name = "addtpoToolStripMenuItem";
+            this.addtpoToolStripMenuItem.Size = new System.Drawing.Size(290, 44);
+            this.addtpoToolStripMenuItem.Text = "增加tpo";
+            this.addtpoToolStripMenuItem.Click += new System.EventHandler(this.addtpoToolStripMenuItem_Click);
+            // 
+            // edittpoToolStripMenuItem
+            // 
+            this.edittpoToolStripMenuItem.Name = "edittpoToolStripMenuItem";
+            this.edittpoToolStripMenuItem.Size = new System.Drawing.Size(290, 44);
+            this.edittpoToolStripMenuItem.Text = "修改tpo";
             // 
             // Form1
             // 
@@ -697,11 +1196,12 @@
             this.ClientSize = new System.Drawing.Size(1839, 1106);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "TOFEL测试软件";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
@@ -715,13 +1215,16 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -766,9 +1269,7 @@
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TabControl tabControl3;
@@ -777,7 +1278,50 @@
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button comTpo20;
+        private System.Windows.Forms.Button comTpo19;
+        private System.Windows.Forms.Button comTpo18;
+        private System.Windows.Forms.Button comTpo17;
+        private System.Windows.Forms.Button comTpo16;
+        private System.Windows.Forms.Button comTpo15;
+        private System.Windows.Forms.Button comTpo14;
+        private System.Windows.Forms.Button comTpo13;
+        private System.Windows.Forms.Button comTpo12;
+        private System.Windows.Forms.Button comTpo11;
+        private System.Windows.Forms.Button comTpo10;
+        private System.Windows.Forms.Button comTpo9;
+        private System.Windows.Forms.Button comTpo8;
+        private System.Windows.Forms.Button comTpo7;
+        private System.Windows.Forms.Button comTpo6;
+        private System.Windows.Forms.Button comTpo5;
+        private System.Windows.Forms.Button comTpo4;
+        private System.Windows.Forms.Button comTpo3;
+        private System.Windows.Forms.Button comTpo2;
+        private System.Windows.Forms.Button comTpo1;
+        private System.Windows.Forms.Button indTpo20;
+        private System.Windows.Forms.Button indTpo19;
+        private System.Windows.Forms.Button indTpo18;
+        private System.Windows.Forms.Button indTpo17;
+        private System.Windows.Forms.Button indTpo16;
+        private System.Windows.Forms.Button indTpo15;
+        private System.Windows.Forms.Button indTpo14;
+        private System.Windows.Forms.Button indTpo13;
+        private System.Windows.Forms.Button indTpo12;
+        private System.Windows.Forms.Button indTpo11;
+        private System.Windows.Forms.Button indTpo10;
+        private System.Windows.Forms.Button indTpo9;
+        private System.Windows.Forms.Button indTpo8;
+        private System.Windows.Forms.Button indTpo7;
+        private System.Windows.Forms.Button indTpo6;
+        private System.Windows.Forms.Button indTpo5;
+        private System.Windows.Forms.Button indTpo4;
+        private System.Windows.Forms.Button indTpo3;
+        private System.Windows.Forms.Button indTpo2;
+        private System.Windows.Forms.Button indTpo1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem addtpoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem edittpoToolStripMenuItem;
     }
 }
 
