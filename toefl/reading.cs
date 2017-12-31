@@ -654,6 +654,10 @@ namespace toefl
             if(this.model == 1){
 
                 //提交函数
+                score sc = new score(this);
+                sc.ShowDialog();
+                //保存答题结果！！！！
+
                 DialogResult = DialogResult.OK;
             }
             else if (this.model==2)
@@ -680,6 +684,8 @@ namespace toefl
                     wrt1.ShowDialog();
                     wrt2.ShowDialog();
                     //给结果
+                    score sc = new score(this);
+                    sc.ShowDialog();
                     DialogResult = DialogResult.OK;
                 }
             }
