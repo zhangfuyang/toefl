@@ -16,7 +16,6 @@ namespace toefl
         private float X;
         private float Y;
         private int tpo;
-        private int model;
         public write(int tpo)
         {
             this.tpo = tpo;
@@ -26,20 +25,7 @@ namespace toefl
             this.Resize += new System.EventHandler(this.Form1_Resize);
             setTag(this);
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.model = 1;//默认是独立写作
         }
-        public write(int tpo,int model)//重载一个构造函数，可以选择model2综合写作
-        {
-            this.tpo = tpo;
-            InitializeComponent();
-            X = this.Width;
-            Y = this.Height;
-            this.Resize += new System.EventHandler(this.Form1_Resize);
-            setTag(this);
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.model = model;
-        }
-
 
         private void setTag(Control cons)
         {
@@ -85,43 +71,13 @@ namespace toefl
 
         }
 
-        private string ProString(string x, int ra)
-        {
-            int i;
-            int j;
-            int length = x.Length;
-            for (i = 0; ra * (i + 1) < length; i++)
-            {
-                j = i + ra * (i + 1);
-                while (x[j] != ' ' && x[j] != '.' && j < length - 1)
-                {
-                    j++;
-                }
-                x = x.Insert(j, "\n");
-            }
-            return x;
-        }
-
-
         private void write_Load(object sender, EventArgs e)
         {
-            if (this.model == 1)
-            {
-                string sql = "select * from IndWritingProblem where setid = " + tpo.ToString();
-                SqlDataReader reader = DatabaseHelp.getReader(sql);
-                reader.Read();
-                label1.Text = "题目:\n" + reader["stem"];
-                reader.Close();
-            }else if (this.model == 2)
-            {
-                string sql = "select * from ComWritingProblem where setid = " + tpo.ToString();
-                SqlDataReader reader = DatabaseHelp.getReader(sql);
-                reader.Read();
-                label1.Text = ProString("题目:\n" + reader["stem"],25)
-                    +ProString("\n\n阅读材料:\n\n" + reader["redmaterial"] , 25)
-                    +ProString("\n\n听力材料:\n\n" + reader["lismaterial"], 25);
-                reader.Close();
-            }
+            string sql = "select * from IndWritingProblem where setid = " + tpo.ToString();
+            SqlDataReader reader = DatabaseHelp.getReader(sql);
+            reader.Read();
+            label1.Text = "题目:\n" + reader["stem"];
+            reader.Close();
 
         }
 
@@ -167,32 +123,16 @@ namespace toefl
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (this.model == 1)
+            DialogResult submitWindowsBox = MessageBox.Show("是否确定提交", "提示信息", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (submitWindowsBox == DialogResult.Yes)
             {
-                DialogResult submitWindowsBox = MessageBox.Show("是否确定提交", "提示信息", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (submitWindowsBox == DialogResult.Yes)
-                {
-                    //写入数据库
-                    string sql = "insert into IndWritingAns (name, date, id, ans) values('" + SystemConfig.name + "', '" + DateTime.Now.ToString() + "', " + tpo.ToString() + ", '" + richTextBox1.Text.Replace("'", "''") + "')";
-                    if (DatabaseHelp.executeCommand(sql) == 0)
-                        MessageBox.Show("保存出现问题，请联系管理员!");
-                    else
-                        MessageBox.Show("保存成功!");
-                    DialogResult = DialogResult.OK;
-                }
-            }else if (this.model == 2)
-            {
-                DialogResult submitWindowsBox = MessageBox.Show("是否确定提交", "提示信息", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (submitWindowsBox == DialogResult.Yes)
-                {
-                    //写入数据库
-                    string sql = "insert into ComWritingAns (name, date, id, ans) values('" + SystemConfig.name + "', '" + DateTime.Now.ToString() + "', " + tpo.ToString() + ", '" + richTextBox1.Text.Replace("'", "''") + "')";
-                    if (DatabaseHelp.executeCommand(sql) == 0)
-                        MessageBox.Show("保存出现问题，请联系管理员!");
-                    else
-                        MessageBox.Show("保存成功!");
-                    DialogResult = DialogResult.OK;
-                }
+                //写入数据库
+                string sql = "insert into IndWritingAns (name, date, id, ans) values('" + SystemConfig.name + "', '" + DateTime.Now.ToString() + "', " + tpo.ToString() + ", '" + richTextBox1.Text.Replace("'","''") + "')";
+                if (DatabaseHelp.executeCommand(sql) == 0)
+                    MessageBox.Show("保存出现问题，请联系管理员!");
+                else
+                    MessageBox.Show("保存成功!");
+                DialogResult = DialogResult.OK;
             }
             //xxx.ShowDialog();
         }

@@ -652,11 +652,8 @@ namespace toefl
         private void button6_Click(object sender, EventArgs e)
         {
             if(this.model == 1){
-
                 //提交函数
-                DialogResult = DialogResult.OK;
-            }
-            else if (this.model==2)
+            }else if (this.model==2)
             {
                 if (this.nowarti <= 1)
                 {
@@ -673,14 +670,7 @@ namespace toefl
                 }
                 else
                 {
-                    //提交并关闭
                     //转综合写作
-                    write wrt1 = new write(tponum,2);
-                    write wrt2 = new write(tponum, 1);
-                    wrt1.ShowDialog();
-                    wrt2.ShowDialog();
-                    //给结果
-                    DialogResult = DialogResult.OK;
                 }
             }
 
