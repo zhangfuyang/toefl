@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
@@ -74,7 +75,7 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -93,6 +94,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label13);
             this.splitContainer1.Panel1.Controls.Add(this.button4);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox2);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
@@ -135,8 +137,18 @@
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.richTextBox1);
             this.splitContainer1.Size = new System.Drawing.Size(2562, 1550);
-            this.splitContainer1.SplitterDistance = 143;
+            this.splitContainer1.SplitterDistance = 346;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1246, 21);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(372, 179);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "提交";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox2
             // 
@@ -581,19 +593,19 @@
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(2562, 1403);
+            this.richTextBox1.Size = new System.Drawing.Size(2562, 1200);
             this.richTextBox1.TabIndex = 26;
             this.richTextBox1.Text = "";
             // 
-            // button4
+            // label13
             // 
-            this.button4.Location = new System.Drawing.Point(1246, 21);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(372, 179);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "提交";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(1134, 253);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(97, 40);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "题号";
             // 
             // addTpo
             // 
@@ -666,5 +678,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label13;
     }
 }

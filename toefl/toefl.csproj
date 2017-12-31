@@ -95,6 +95,12 @@
     <Compile Include="register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
     </Compile>
+    <Compile Include="score.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="score.Designer.cs">
+      <DependentUpon>score.cs</DependentUpon>
+    </Compile>
     <Compile Include="series.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="register.resx">
       <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="score.resx">
+      <DependentUpon>score.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="series.resx">
       <DependentUpon>series.cs</DependentUpon>
