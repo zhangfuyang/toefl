@@ -70,6 +70,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "综合写作";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -111,7 +112,7 @@
             this.ClientSize = new System.Drawing.Size(865, 528);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "series";
             this.Text = "series";
