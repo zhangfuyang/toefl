@@ -159,6 +159,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "score";
             this.Text = "score";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.score_Load);
             this.panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);

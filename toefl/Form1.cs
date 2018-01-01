@@ -220,5 +220,10 @@ namespace toefl
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            peer_check pc = new peer_check();
+            pc.ShowDialog();
+        }
     }
 }
