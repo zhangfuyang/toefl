@@ -66,6 +66,12 @@
     <Compile Include="ChooseDialog.Designer.cs">
       <DependentUpon>ChooseDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="peer_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="peer_check.Designer.cs">
+      <DependentUpon>peer_check.cs</DependentUpon>
+    </Compile>
     <Compile Include="readingQuestion.cs" />
     <Compile Include="config\SystemConfig.cs" />
     <Compile Include="dataclass\DatabaseHelp.cs" />
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="peer_check.resx">
+      <DependentUpon>peer_check.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
