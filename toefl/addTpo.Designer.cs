@@ -78,6 +78,8 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -96,6 +98,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.textBox3);
+            this.splitContainer1.Panel1.Controls.Add(this.label15);
             this.splitContainer1.Panel1.Controls.Add(this.textBox2);
             this.splitContainer1.Panel1.Controls.Add(this.label14);
             this.splitContainer1.Panel1.Controls.Add(this.label13);
@@ -148,7 +152,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(1134, 253);
+            this.label13.Location = new System.Drawing.Point(1050, 264);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(97, 40);
             this.label13.TabIndex = 13;
@@ -288,7 +292,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(887, 244);
+            this.button3.Location = new System.Drawing.Point(855, 245);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(123, 65);
             this.button3.TabIndex = 9;
@@ -615,7 +619,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(1348, 254);
+            this.label14.Location = new System.Drawing.Point(1227, 264);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(177, 40);
             this.label14.TabIndex = 14;
@@ -624,10 +628,28 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(1531, 251);
+            this.textBox2.Location = new System.Drawing.Point(1410, 261);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(885, 53);
+            this.textBox2.Size = new System.Drawing.Size(229, 53);
             this.textBox2.TabIndex = 15;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox3.Location = new System.Drawing.Point(1885, 261);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(229, 53);
+            this.textBox3.TabIndex = 17;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label15.Location = new System.Drawing.Point(1702, 264);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(177, 40);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "阅读主题";
             // 
             // addTpo
             // 
@@ -703,5 +725,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label15;
     }
 }
