@@ -110,7 +110,7 @@ namespace toefl
                 string sql = "select * from IndWritingProblem where setid = " + tpo.ToString();
                 SqlDataReader reader = DatabaseHelp.getReader(sql);
                 reader.Read();
-                label1.Text = "题目:\n" + reader["stem"];
+                label1.Text = ProString("题目:\n" + reader["stem"],25);
                 reader.Close();
             }else if (this.model == 2)
             {
