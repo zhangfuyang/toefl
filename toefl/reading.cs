@@ -540,13 +540,35 @@ namespace toefl
                 DateTime now = DateTime.Now;
                 for (int i = 0; i < arti.questionnum; i++)
                 {
-                    sql = "insert into ReadingAns values('" + SystemConfig.name + "', '" + now.ToString() + "', " + rq[i].id + ", '" + studentAnswers[i] + "')";
+                    sql = "insert into ReadingAns(name, date, id, ans) values('" + SystemConfig.name + "', '" + now.ToString() + "', " + rq[i].id + ", '" + studentAnswers[i] + "')";
                     try {
                         result = DatabaseHelp.executeCommand(sql);
                     }
                     catch
                     {
                         MessageBox.Show("保存失败!");
+                    }
+                }
+            }
+            else if(model == 2)
+            {
+                string sql;
+                int result;
+                int index = 0;
+                DateTime now = DateTime.Now;
+                for(int j = 0; j < 3; j++)
+                {
+                    for(int i=0; i < artis[j].questionnum;i++)
+                    {
+                        sql = "insert into ReadingAns(name, date, id, ans) values('" + SystemConfig.name + "', '" + now.ToString() + "', " + rq[index].id + ", '" + studentAnswers[index++] + "')";
+                        try
+                        {
+                            result = DatabaseHelp.executeCommand(sql);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("保存失败");
+                        }
                     }
                 }
             }
@@ -731,7 +753,7 @@ namespace toefl
                 else
                 {
                     //提交并关闭
-
+                    submit();
 
                     //转综合写作
                     write wrt1 = new write(tponum,2);
