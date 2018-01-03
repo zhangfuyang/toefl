@@ -19,5 +19,6 @@ namespace toefl
         public string stem;
         public string lismaterial;
         public string redmaterial;
+        public string comname;
     }
 }
