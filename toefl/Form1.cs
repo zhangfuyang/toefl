@@ -77,20 +77,34 @@ namespace toefl
             study_label.Text = "    累计学习时间:" + SystemConfig.time.ToString() + "h";
             right_label.Text = "      平均正确率:" + SystemConfig.acc.ToString();
             count_label.Text = "累计练习题目数量:" + SystemConfig.question_num.ToString();
-
-            listBox1.Items.Clear();
-            string sql = "select * from ReadingQuestion inner join (select id,ReadingAns.date from ReadingAns where (name = '";
-            sql+= SystemConfig.name + "'and ReadingAns.date in (select max(date) as date from ReadingAns where name = '";
-            sql += SystemConfig.name;
-            sql += "' and correct = 0 group by id))) as xx on ReadingQuestion.id = xx.id order by date desc";
-            SqlDataReader reader = DatabaseHelp.getReader(sql);
-            for(int i = 0; i < 15; i++)
+            if (SystemConfig.name == "admin")
             {
-                if (!reader.Read())
-                    break;
-                listBox1.Items.Add(reader["type"] + ":" + reader["stem"]);
+                label5.Text = "意见反馈列表";
+                listBox1.Items.Clear();
+                string sql = "select * from (select *,ROW_NUMBER() over(order by date) as num from UserSuggestion) as x where num < 15";
+                SqlDataReader reader = DatabaseHelp.getReader(sql);
+                while(reader.Read())
+                {
+                    listBox1.Items.Add(reader["name"].ToString().Trim() + ":" + reader["title"]);
+                }
+                reader.Close();
             }
-            reader.Close();
+            else
+            {
+                listBox1.Items.Clear();
+                string sql = "select * from ReadingQuestion inner join (select id,ReadingAns.date from ReadingAns where (name = '";
+                sql += SystemConfig.name + "'and ReadingAns.date in (select max(date) as date from ReadingAns where name = '";
+                sql += SystemConfig.name;
+                sql += "' and correct = 0 group by id))) as xx on ReadingQuestion.id = xx.id order by date desc";
+                SqlDataReader reader = DatabaseHelp.getReader(sql);
+                for (int i = 0; i < 15; i++)
+                {
+                    if (!reader.Read())
+                        break;
+                    listBox1.Items.Add(reader["type"] + ":" + reader["stem"]);
+                }
+                reader.Close();
+            }
         }
 
         private void setTag(Control cons)
@@ -148,7 +162,7 @@ namespace toefl
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult closeWindowsBox = MessageBox.Show("是否保存本次做题情况到数据库", "提示信息", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult closeWindowsBox = MessageBox.Show("你舍得离我而去吗???", "提示信息", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if(closeWindowsBox == DialogResult.Yes)
             {
                 //写入数据库
@@ -163,7 +177,37 @@ namespace toefl
             {
                 return;
             }
-            //链接到reading界面
+            if (SystemConfig.name == "admin")
+            {
+                string[] item;
+                item = listBox1.Items[index].ToString().Split(':');
+                string name = item[0];
+                string title="";
+                for(int i = 1; i < item.Length; i++)
+                {
+                    title += item[i];
+                }
+                string sql = "select * from UserSuggestion where name = '" + name + "' and title = '" + title + "'";
+                SqlDataReader reader = DatabaseHelp.getReader(sql);
+                while (reader.Read())
+                {
+                    feedbackAdmin fd = new feedbackAdmin(reader["title"].ToString(), reader["name"].ToString(), reader["suggest"].ToString(), reader["date"].ToString());
+                    DialogResult result = fd.ShowDialog();
+                    if (result == DialogResult.No)
+                    {
+                        reader.Close();
+                        return;
+                    }
+                }
+                reader.Close();
+                sql = "delete from UserSuggestion where name = '" + name + "' and title = '" + title + "'";
+                DatabaseHelp.executeCommand(sql);
+                setup();
+            }
+            else
+            {
+                //链接到reading界面
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -49,7 +49,7 @@ namespace toefl
             {
                 result = DatabaseHelp.executeCommand(sql);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("评分失败，请联系管理员");
                 return;

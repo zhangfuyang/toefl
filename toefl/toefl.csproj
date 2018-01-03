@@ -72,6 +72,12 @@
     <Compile Include="feedback.Designer.cs">
       <DependentUpon>feedback.cs</DependentUpon>
     </Compile>
+    <Compile Include="feedbackAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="feedbackAdmin.Designer.cs">
+      <DependentUpon>feedbackAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="writing.cs" />
     <Compile Include="peer_check.cs">
       <SubType>Form</SubType>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="feedback.resx">
       <DependentUpon>feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedbackAdmin.resx">
+      <DependentUpon>feedbackAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
