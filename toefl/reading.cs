@@ -507,11 +507,6 @@ namespace toefl
 
             //load第一篇文章。
             
-
-            
-           
-
-            
             button3.Enabled = false;
             this.nownum = 0;
             this.nowarti = 0;
@@ -538,7 +533,23 @@ namespace toefl
         }
         private void submit()
         {
-
+            if(model == 1) //单项
+            {
+                string sql;
+                int result;
+                DateTime now = DateTime.Now;
+                for (int i = 0; i < arti.questionnum; i++)
+                {
+                    sql = "insert into ReadingAns values('" + SystemConfig.name + "', '" + now.ToString() + "', " + rq[i].id + ", '" + studentAnswers[i] + "')";
+                    try {
+                        result = DatabaseHelp.executeCommand(sql);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("保存失败!");
+                    }
+                }
+            }
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -687,6 +698,7 @@ namespace toefl
 
                 //提交函数
                 //保存答题结果！！！！
+                submit();
                 score sc = new score(this);
                 this.Hide();
                 sc.WindowState = FormWindowState.Maximized;
