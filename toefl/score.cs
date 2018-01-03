@@ -33,7 +33,10 @@ namespace toefl
                 }
                 richTextBox1.Text = this.rd.rq[0].analysis;
                 //load文章
-            }else if (this.rd.model == 2)
+                this.webBrowser1.DocumentText = "<span style='color: rgb(128, 128, 128); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: \"Helvetica Neue\", Helvetica, \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>"
+                 + "<p align=\"center\">" + rd.arti.title + "</p>" + "<p>" + rd.arti.content.Replace("\r\n", "</p><p>").Replace("\n", "</p><p>") + "</p></span>";
+            }
+            else if (this.rd.model == 2)
             {
                 for (i = 0; i < this.rd.allrqnum; i++)
                 {
@@ -43,6 +46,8 @@ namespace toefl
                         this.rd.rq[i].ans }));
                 }
                 richTextBox1.Text = this.rd.rq[0].analysis;
+                this.webBrowser1.DocumentText = "<span style='color: rgb(128, 128, 128); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: \"Helvetica Neue\", Helvetica, \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>"
+                 + "<p align=\"center\">" + rd.artis[0].title + "</p>" + "<p>" + rd.artis[0].content.Replace("\r\n", "</p><p>").Replace("\n", "</p><p>") + "</p></span>";
             }
         }
 
@@ -60,8 +65,9 @@ namespace toefl
                     return;
                 int num = Convert.ToInt32(listView1.SelectedItems[0].SubItems[0].Text);
                 richTextBox1.Text = this.rd.rq[num - 1].analysis;
-                
-                //文章号：this.rd.rq[num - 1].articleid;
+                this.webBrowser1.DocumentText = "<span style='color: rgb(128, 128, 128); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: \"Helvetica Neue\", Helvetica, \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>"
+                 + "<p align=\"center\">" + rd.artis[rd.rq[num - 1].articleid-1].title + "</p>" + "<p>" + rd.artis[rd.rq[num - 1].articleid-1].content.Replace("\r\n", "</p><p>").Replace("\n", "</p><p>") + "</p></span>";
+                //this.rd.rq[num - 1].articleid-1;
             }
         }
     }

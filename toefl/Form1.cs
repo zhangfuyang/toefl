@@ -50,15 +50,15 @@ namespace toefl
                 int row = ((int)reader["id"] - 1) / 3;
                 if ((int)reader["id"] % 3 == 1) //第一列 41
                 {
-                    newButton.Location = new Point(41, 9 + 110 * row);
+                    newButton.Location = new Point(30, 9 + 110 * row);
                 }
                 else if ((int)reader["id"] % 3 == 2) //265
                 {
-                    newButton.Location = new Point(265, 9 + 110 * row);
+                    newButton.Location = new Point(220, 9 + 110 * row);
                 }
                 else //503
                 {
-                    newButton.Location = new Point(503, 9 + 110 * row);
+                    newButton.Location = new Point(410, 9 + 110 * row);
                 }
                 newButton.Margin = new Padding(2, 2, 2, 2);
                 newButton.Size = new Size(146, 61);
@@ -201,15 +201,15 @@ namespace toefl
             int row = (tpoid - 1) / 3;
             if(tpoid % 3 == 1) //第一列 41
             {
-                newButton.Location = new Point(41, 9 + 110 * row);
+                newButton.Location = new Point(30, 9 + 110 * row);
             }
-            else if(tpoid % 3 == 2) //265
+            else if(tpoid % 3 == 2) //230
             {
-                newButton.Location = new Point(265, 9 + 110 * row);
+                newButton.Location = new Point(220, 9 + 110 * row);
             }
             else //503
             {
-                newButton.Location = new Point(503, 9 + 110 * row);
+                newButton.Location = new Point(410, 9 + 110 * row);
             }
             newButton.UseVisualStyleBackColor = true;
             newButton.Click += new System.EventHandler(this.tpo_Click);

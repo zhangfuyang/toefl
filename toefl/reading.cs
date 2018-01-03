@@ -135,10 +135,11 @@ namespace toefl
                 this.studentAnswers[nownum] = ans;
                 this.nownum += 1;
                 this.nowartinum += 1;
+                button3.Enabled = true;
                 if (this.nowartinum == this.artis[nowarti].questionnum - 1)
                 {
                     button4.Enabled = false;
-                    button3.Enabled = true;
+                    
                 }
                 load_left_ins();
             }
@@ -417,10 +418,9 @@ namespace toefl
                 this.rq[i].analysis = DatabaseHelp.convert(this.rq[i].analysis, reader["analysis"]);
                 reader.Close();
             }
-
-            this.webBrowser1.DocumentText = " <p>&nbsp;<span style='color: rgb(128, 128, 128); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: \"Helvetica Neue\", Helvetica, \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>"
-                 + "this is a line\nthis is another line"
-                + " </ span ></ p >" + "<p>ananother line</ p>";
+            
+            this.webBrowser1.DocumentText = "<span style='color: rgb(128, 128, 128); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: \"Helvetica Neue\", Helvetica, \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>"
+                 + "<p align=\"center\">" + arti.title + "</p>" + "<p>" + arti.content.Replace("\r\n", "</p><p>").Replace("\n", "</p><p>") + "</p></span>";
             button3.Enabled = false;
             this.nownum = 0;
             load_left_ins();
@@ -511,13 +511,13 @@ namespace toefl
             
            
 
-            this.webBrowser1.DocumentText = " <p>&nbsp;<span style='color: rgb(128, 128, 128); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: \"Helvetica Neue\", Helvetica, \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>"
-                 + "this is a line\nthis is another line"
-                + " </ span ></ p >" + "<p>ananother line</ p>";
+            
             button3.Enabled = false;
             this.nownum = 0;
             this.nowarti = 0;
             this.nowartinum = 0;
+            this.webBrowser1.DocumentText = "<span style='color: rgb(128, 128, 128); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: \"Helvetica Neue\", Helvetica, \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>"
+                 + "<p align=\"center\">" + artis[nowarti].title + "</p>" + "<p>" + artis[nowarti].content.Replace("\r\n", "</p><p>").Replace("\n", "</p><p>") + "</p></span>";
             load_left_ins();
             this.timer1.Enabled = true;
             this.leftTime = TimeSpan.Parse("1:0:0");
@@ -551,8 +551,11 @@ namespace toefl
                     this.Hide();
                     this.timer1.Enabled = false;
                     score sc = new score(this);
+                    this.Hide();
+                    sc.WindowState = FormWindowState.Maximized;
                     sc.ShowDialog();
                     DialogResult = DialogResult.OK;
+                    this.Close();
                     return;
                 }else if (this.model == 2)
                 {
@@ -566,7 +569,10 @@ namespace toefl
                     wrt2.ShowDialog();
                     //给结果
                     score sc = new score(this);
+                    this.Hide();
+                    sc.WindowState = FormWindowState.Maximized;
                     sc.ShowDialog();
+                    this.Close();
                     DialogResult = DialogResult.OK;
                     return;
                 }
@@ -680,9 +686,12 @@ namespace toefl
             if(this.model == 1){
 
                 //提交函数
-                score sc = new score(this);
-                sc.ShowDialog();
                 //保存答题结果！！！！
+                score sc = new score(this);
+                this.Hide();
+                sc.WindowState = FormWindowState.Maximized;
+                sc.ShowDialog();
+                
 
                 DialogResult = DialogResult.OK;
             }
@@ -691,13 +700,19 @@ namespace toefl
                 if (this.nowarti <= 1)
                 {
                     this.nowarti += 1;
+                    this.webBrowser1.DocumentText = "<span style='color: rgb(128, 128, 128); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: \"Helvetica Neue\", Helvetica, \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>"
+                        + "<p align=\"center\">" + artis[nowarti].title + "</p>" + "<p>" + artis[nowarti].content.Replace("\r\n", "</p><p>").Replace("\n", "</p><p>") + "</p></span>";
                     this.nowartinum = 0;
                     if (this.nowarti == 1)
                     {
                         this.nownum = this.artis[0].questionnum;
+                        button3.Enabled = false;
+                        button4.Enabled = true;
                     }else if (this.nowarti == 2)
                     {
                         this.nownum = this.artis[0].questionnum + this.artis[1].questionnum;
+                        button3.Enabled = false;
+                        button4.Enabled = true;
                     }
                     load_left_ins();
                 }
@@ -713,6 +728,8 @@ namespace toefl
                     wrt2.ShowDialog();
                     //给结果
                     score sc = new score(this);
+                    this.Hide();
+                    sc.WindowState = FormWindowState.Maximized;
                     sc.ShowDialog();
                     DialogResult = DialogResult.OK;
                 }
