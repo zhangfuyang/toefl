@@ -536,14 +536,40 @@ namespace toefl
             }
             
         }
+        private void submit()
+        {
 
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             TimeSpan t = TimeSpan.Parse("0:0:1");
             if (this.leftTime == TimeSpan.Parse("0:0:0"))
             {
                 //强制提交
-                return;
+                if (this.model == 1)
+                {
+                    this.Hide();
+                    this.timer1.Enabled = false;
+                    score sc = new score(this);
+                    sc.ShowDialog();
+                    DialogResult = DialogResult.OK;
+                    return;
+                }else if (this.model == 2)
+                {
+                    //提交并关闭
+
+
+                    //转综合写作
+                    write wrt1 = new write(tponum, 2);
+                    write wrt2 = new write(tponum, 1);
+                    wrt1.ShowDialog();
+                    wrt2.ShowDialog();
+                    //给结果
+                    score sc = new score(this);
+                    sc.ShowDialog();
+                    DialogResult = DialogResult.OK;
+                    return;
+                }
             }
             if (this.button2.Text != "暂停")
             {
@@ -678,9 +704,11 @@ namespace toefl
                 else
                 {
                     //提交并关闭
+
+
                     //转综合写作
                     write wrt1 = new write(tponum,2);
-                    write wrt2 = new write(tponum, 1);
+                    write wrt2 = new write(tponum,1);
                     wrt1.ShowDialog();
                     wrt2.ShowDialog();
                     //给结果

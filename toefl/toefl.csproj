@@ -66,6 +66,7 @@
     <Compile Include="ChooseDialog.Designer.cs">
       <DependentUpon>ChooseDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="writing.cs" />
     <Compile Include="peer_check.cs">
       <SubType>Form</SubType>
     </Compile>
