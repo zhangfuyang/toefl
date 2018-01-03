@@ -51,15 +51,15 @@ namespace toefl
             }
             catch (Exception)
             {
-                MessageBox.Show("评分失败，请联系管理员");
+                MessageBox.Show("感谢您的反馈，我们会尽快处理");
                 return;
             }
             if (result == 0)
             {
-                MessageBox.Show("评分失败，请联系管理员");
+                MessageBox.Show("感谢您的反馈，我们会尽快处理");
                 return;
             }
-            MessageBox.Show("评分成功");
+            MessageBox.Show("感谢您的反馈，我们会尽快处理");
             DialogResult = DialogResult.OK;
 
         }

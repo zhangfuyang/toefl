@@ -30,6 +30,8 @@ namespace toefl
         public int allrqnum=0;
         public int nowarti;
         public int nowartinum = 0;
+        //for model 3 
+        public int id;
         public reading(int model,int parm)
         {
             InitializeComponent();
@@ -44,6 +46,12 @@ namespace toefl
                 this.model = model;
                 this.tponum = parm;
                 this.artis = new article[3];
+            }else if (model == 3)
+            {
+                this.model = model;
+                this.id = parm;
+                this.studentAnswers = new string[1];
+                studentAnswers[0] = "";
             }
             
             X = this.Width;
@@ -359,6 +367,63 @@ namespace toefl
             else if (this.model == 2)
             {
                 load_left_ins4model2();
+            }else if (this.model == 3)
+            {
+                int line = 0;
+                int loc = 12;
+                this.nownum = 0;
+                question_label.Text = ProString(this.rq[this.nownum].stem, 35, ref line);
+                question_label.Location = new Point(40, loc);
+                loc += line * 30 + 10;
+                if (this.rq[this.nownum].opnum == 4)
+                {
+                    checkBox1.Text = "A:  " + ProString(this.rq[this.nownum].optionx[0], 40, ref line);
+                    checkBox1.Location = new Point(40, loc);
+                    loc += line * 20 + 10;
+                    checkBox2.Text = "B:  " + ProString(this.rq[this.nownum].optionx[1], 40, ref line);
+                    checkBox2.Location = new Point(40, loc);
+                    loc += line * 20 + 10;
+                    checkBox3.Text = "C:  " + ProString(this.rq[this.nownum].optionx[2], 40, ref line);
+                    checkBox3.Location = new Point(40, loc);
+                    loc += line * 20 + 10;
+                    checkBox4.Text = "D:  " + ProString(this.rq[this.nownum].optionx[3], 40, ref line);
+                    checkBox4.Location = new Point(40, loc);
+                    loc += line * 20 + 10;
+                    checkBox1.Visible = true;
+                    checkBox2.Visible = true;
+                    checkBox3.Visible = true;
+                    checkBox4.Visible = true;
+                    checkBox5.Visible = false;
+                    checkBox6.Visible = false;
+
+                }
+                else if (this.rq[this.nownum].opnum == 6)
+                {
+                    checkBox1.Text = "A:  " + ProString(this.rq[this.nownum].optionx[0], 40, ref line);
+                    checkBox1.Location = new Point(40, loc);
+                    loc += line * 20 + 10;
+                    checkBox2.Text = "B:  " + ProString(this.rq[this.nownum].optionx[1], 40, ref line);
+                    checkBox2.Location = new Point(40, loc);
+                    loc += line * 20 + 10;
+                    checkBox3.Text = "C:  " + ProString(this.rq[this.nownum].optionx[2], 40, ref line);
+                    checkBox3.Location = new Point(40, loc);
+                    loc += line * 20 + 10;
+                    checkBox4.Text = "D:  " + ProString(this.rq[this.nownum].optionx[3], 40, ref line);
+                    checkBox4.Location = new Point(40, loc);
+                    loc += line * 20 + 10;
+                    checkBox5.Text = "E:  " + ProString(this.rq[this.nownum].optionx[4], 40, ref line);
+                    checkBox5.Location = new Point(40, loc);
+                    loc += line * 20 + 10;
+                    checkBox6.Text = "F:  " + ProString(this.rq[this.nownum].optionx[5], 40, ref line);
+                    checkBox6.Location = new Point(40, loc);
+                    loc += line * 20 + 10;
+                    checkBox1.Visible = true;
+                    checkBox2.Visible = true;
+                    checkBox3.Visible = true;
+                    checkBox4.Visible = true;
+                    checkBox5.Visible = true;
+                    checkBox6.Visible = true;
+                }
             }
         }
 
@@ -528,6 +593,57 @@ namespace toefl
             }else if (this.model == 2)
             {
                 load4model2();
+            }else if (this.model == 3)
+            {
+                this.Hide();
+                label1.Visible = false;
+                button1.Visible = false;
+                button2.Visible = false;
+                button4.Visible = false;
+                button5.Visible = false;
+                button3.Visible = false;
+                button6.Text = "查看解析";
+                rq = new readingQuestion[1];
+                rq[0] = new readingQuestion();
+
+                string  sql = "SELECT * FROM [dbo].[ReadingQuestion] WHERE id=" + this.id.ToString();
+                SqlDataReader reader = DatabaseHelp.getReader(sql);
+                reader.Read();
+                int i = 0;
+                this.rq[i].id = this.id;
+                this.rq[i].articleid = DatabaseHelp.convert(this.rq[i].articleid, reader["articleid"]);
+                this.rq[i].num = DatabaseHelp.convert(this.rq[i].num, reader["num"]);
+                this.rq[i].type = DatabaseHelp.convert(this.rq[i].type, reader["type"]);
+                this.rq[i].stem = DatabaseHelp.convert(this.rq[i].stem, reader["stem"]);
+                this.rq[i].opnum = DatabaseHelp.convert(this.rq[i].opnum, reader["opnum"]);
+                this.rq[i].paragraph = DatabaseHelp.convert(this.rq[i].paragraph, reader["paragraph"]);
+                this.rq[i].paragraph2 = DatabaseHelp.convert(this.rq[i].paragraph2, reader["paragraph2"]);
+                this.rq[i].optionx = new string[this.rq[i].opnum];
+                for (int j1 = 0; j1 < this.rq[i].opnum; j1++)
+                {
+                    this.rq[i].optionx[j1] = DatabaseHelp.convert(this.rq[i].optionx[j1], reader["option" + (j1 + 1).ToString()]);
+                }
+                this.rq[i].ans = DatabaseHelp.convert(this.rq[i].ans, reader["ans"]);
+                this.rq[i].acc = DatabaseHelp.convert(this.rq[i].acc, reader["acc"]);
+                this.rq[i].analysis = DatabaseHelp.convert(this.rq[i].analysis, reader["analysis"]);
+
+
+                reader.Close();
+
+                artis = new article[1];
+
+                sql = "SELECT * FROM [dbo].[ReadingArticle] WHERE id = " + this.rq[0].articleid.ToString();
+                reader = DatabaseHelp.getReader(sql);
+                reader.Read();
+                this.artis[i] = new article();
+                this.artis[i].title = DatabaseHelp.convert(this.artis[i].title, reader["title"]);
+                this.artis[i].content = DatabaseHelp.convert(this.artis[i].content, reader["article"]);
+                
+                reader.Close();
+                load_left_ins();
+                this.webBrowser1.DocumentText = "<span style='color: rgb(128, 128, 128); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: \"Helvetica Neue\", Helvetica, \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>"
+                 + "<p align=\"center\">" + artis[0].title + "</p>" + "<p>" + artis[0].content.Replace("\r\n", "</p><p>").Replace("\n", "</p><p>") + "</p></span>";
+                this.Show();
             }
             
         }
@@ -716,7 +832,15 @@ namespace toefl
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if(this.model == 1){
+            string ans = "";
+            ans += checkBox1.Checked ? "A" : "";
+            ans += checkBox2.Checked ? "B" : "";
+            ans += checkBox3.Checked ? "C" : "";
+            ans += checkBox4.Checked ? "D" : "";
+            ans += checkBox5.Checked ? "E" : "";
+            ans += checkBox6.Checked ? "F" : "";
+            this.studentAnswers[nownum] = ans;
+            if (this.model == 1){
 
                 //提交函数
                 //保存答题结果！！！！
@@ -768,7 +892,14 @@ namespace toefl
                     DialogResult = DialogResult.OK;
                 }
             }
-
+            else if (this.model == 3)
+            {
+                score sc = new score(this);
+                this.Hide();
+                sc.WindowState = FormWindowState.Maximized;
+                sc.ShowDialog();
+                DialogResult = DialogResult.OK;
+            }
         }
     }
 }

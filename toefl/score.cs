@@ -48,6 +48,18 @@ namespace toefl
                 richTextBox1.Text = this.rd.rq[0].analysis;
                 this.webBrowser1.DocumentText = "<span style='color: rgb(128, 128, 128); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: \"Helvetica Neue\", Helvetica, \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>"
                  + "<p align=\"center\">" + rd.artis[0].title + "</p>" + "<p>" + rd.artis[0].content.Replace("\r\n", "</p><p>").Replace("\n", "</p><p>") + "</p></span>";
+            }else if (this.rd.model == 3)
+            {
+                for (i = 0; i < 1; i++)
+                {
+                    listView1.Items.Add(new ListViewItem(new string[]
+                    { (i + 1).ToString(),
+                        this.rd.studentAnswers[i]==""?"-----":this.rd.studentAnswers[i],
+                        this.rd.rq[i].ans }));
+                }
+                richTextBox1.Text = this.rd.rq[0].analysis;
+                this.webBrowser1.DocumentText = "<span style='color: rgb(128, 128, 128); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: \"Helvetica Neue\", Helvetica, \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>"
+                 + "<p align=\"center\">" + rd.artis[0].title + "</p>" + "<p>" + rd.artis[0].content.Replace("\r\n", "</p><p>").Replace("\n", "</p><p>") + "</p></span>";
             }
         }
 

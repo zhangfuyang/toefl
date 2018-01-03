@@ -15,6 +15,7 @@ namespace toefl
     {
         private float X;
         private float Y;
+        private int []errid;
         public Form1()
         {
             InitializeComponent();
@@ -84,11 +85,15 @@ namespace toefl
             sql += SystemConfig.name;
             sql += "' and correct = 0 group by id))) as xx on ReadingQuestion.id = xx.id order by date desc";
             SqlDataReader reader = DatabaseHelp.getReader(sql);
+            errid = new int[15];
             for(int i = 0; i < 15; i++)
             {
                 if (!reader.Read())
                     break;
+                errid[i] = DatabaseHelp.convert(errid[i], reader["id"]);
                 listBox1.Items.Add(reader["type"] + ":" + reader["stem"]);
+                
+
             }
             reader.Close();
         }
@@ -164,6 +169,8 @@ namespace toefl
                 return;
             }
             //链接到reading界面
+            reading rd= new reading(3,errid[index]);
+            rd.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)
