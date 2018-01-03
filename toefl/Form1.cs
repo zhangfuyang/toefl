@@ -231,5 +231,11 @@ namespace toefl
             peer_check pc = new peer_check(2);
             pc.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            feedback bk = new feedback();
+            bk.ShowDialog();
+        }
     }
 }
