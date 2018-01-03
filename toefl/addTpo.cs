@@ -730,7 +730,7 @@ namespace toefl
                     if (Readtext[i, no, 2] == "")
                         break;
                 }
-                xmlarticle.SetAttribute("questionno", no.ToString());
+                xmlarticle.SetAttribute("questionno", (no-1).ToString());
                 xmlelem2.AppendChild(xmlarticle);
                 for (int j = 1; j <= 19; j++)
                 {
@@ -777,11 +777,11 @@ namespace toefl
             }
             root.AppendChild(xmlelem);
 
-            string test;
-            test = "<?xml version=\"1.0\" encoding=\"gb2312\"?><NEWTPO><IndWriting setid=\"101\" subject=\"随便答题\" stem=\"为什么张夫洋最帅\" model=\"就是帅\" /><ComWriting setid=\"101\" subject=\"简单题\" stem=\"谁最帅\" model=\"张夫洋\" redmaterial=\"到底谁最帅\" /><Reading><Reading0><Article article=\"民工漫\" title=\"漫画\" setid=\"101\" subject=\"中文话题\" questionno=\"2\" /><question id=\"1\" articleid=\"1\" num=\"1\" type=\"错别字\" paragraph=\"1\" paragraph2=\"1\" stem=\"海贼王\" opnum=\"4\" option1=\"路费\" option2=\"娜美\" option3=\"香吉士\" option4=\"索隆\" option5=\"\" option6=\"\" option7=\"\" ans=\"A\" analysis=\"\" /><question id=\"2\" articleid=\"1\" num=\"2\" type=\"女性\" paragraph=\"2\" paragraph2=\"2\" stem=\"火影\" opnum=\"4\" option1=\"名人\" option2=\"宇智波鼬\" option3=\"佐助\" option4=\"小樱\" option5=\"\" option6=\"\" option7=\"\" ans=\"D\" analysis=\"\" /></Reading0><Reading1><Article article=\"NBA的题\" title=\"NBA\" setid=\"101\" subject=\"NBA话题\" questionno=\"1\" /><question id=\"1\" articleid=\"2\" num=\"1\" type=\"最nb\" paragraph=\"0\" paragraph2=\"1\" stem=\"NBA\" opnum=\"4\" option1=\"休斯顿火箭\" option2=\"圣安东尼奥马刺\" option3=\"奥克拉荷马雷霆\" option4=\"金州勇士\" option5=\"\" option6=\"\" option7=\"\" ans=\"D\" analysis=\"\" /></Reading1><Reading2><Article article=\"计算机知识\" title=\"计算机\" setid=\"101\" subject=\"计算机话题\" questionno=\"2\" /><question id=\"1\" articleid=\"3\" num=\"1\" type=\"随便选\" paragraph=\"20\" paragraph2=\"20\" stem=\"CPU\" opnum=\"5\" option1=\"主频\" option2=\"寄存器\" option3=\"时钟\" option4=\"cache\" option5=\"总线\" option6=\"\" option7=\"\" ans=\"D\" analysis=\"\" /><question id=\"2\" articleid=\"3\" num=\"2\" type=\"重要\" paragraph=\"5\" paragraph2=\"5\" stem=\"硬件\" opnum=\"5\" option1=\"cpu\" option2=\"内存\" option3=\"外存\" option4=\"显卡\" option5=\"显示器\" option6=\"\" option7=\"\" ans=\"A\" analysis=\"\" /></Reading2></Reading></NEWTPO>";
-            DatabaseHelp.ExecuteProc(test, "insert_new_tpo");
+            //string test;
+            //test = "<?xml version=\"1.0\" encoding=\"gb2312\"?><NEWTPO><IndWriting setid=\"101\" subject=\"随便答题\" stem=\"为什么张夫洋最帅\" model=\"就是帅\" /><ComWriting setid=\"101\" subject=\"简单题\" stem=\"谁最帅\" model=\"张夫洋\" redmaterial=\"到底谁最帅\" /><Reading><Reading0><Article article=\"民工漫\" title=\"漫画\" setid=\"101\" subject=\"中文话题\" questionno=\"2\" /><question id=\"1\" articleid=\"1\" num=\"1\" type=\"错别字\" paragraph=\"1\" paragraph2=\"1\" stem=\"海贼王\" opnum=\"4\" option1=\"路费\" option2=\"娜美\" option3=\"香吉士\" option4=\"索隆\" option5=\"\" option6=\"\" option7=\"\" ans=\"A\" analysis=\"\" /><question id=\"2\" articleid=\"1\" num=\"2\" type=\"女性\" paragraph=\"2\" paragraph2=\"2\" stem=\"火影\" opnum=\"4\" option1=\"名人\" option2=\"宇智波鼬\" option3=\"佐助\" option4=\"小樱\" option5=\"\" option6=\"\" option7=\"\" ans=\"D\" analysis=\"\" /></Reading0><Reading1><Article article=\"NBA的题\" title=\"NBA\" setid=\"101\" subject=\"NBA话题\" questionno=\"1\" /><question id=\"1\" articleid=\"2\" num=\"1\" type=\"最nb\" paragraph=\"0\" paragraph2=\"1\" stem=\"NBA\" opnum=\"4\" option1=\"休斯顿火箭\" option2=\"圣安东尼奥马刺\" option3=\"奥克拉荷马雷霆\" option4=\"金州勇士\" option5=\"\" option6=\"\" option7=\"\" ans=\"D\" analysis=\"\" /></Reading1><Reading2><Article article=\"计算机知识\" title=\"计算机\" setid=\"101\" subject=\"计算机话题\" questionno=\"2\" /><question id=\"1\" articleid=\"3\" num=\"1\" type=\"随便选\" paragraph=\"20\" paragraph2=\"20\" stem=\"CPU\" opnum=\"5\" option1=\"主频\" option2=\"寄存器\" option3=\"时钟\" option4=\"cache\" option5=\"总线\" option6=\"\" option7=\"\" ans=\"D\" analysis=\"\" /><question id=\"2\" articleid=\"3\" num=\"2\" type=\"重要\" paragraph=\"5\" paragraph2=\"5\" stem=\"硬件\" opnum=\"5\" option1=\"cpu\" option2=\"内存\" option3=\"外存\" option4=\"显卡\" option5=\"显示器\" option6=\"\" option7=\"\" ans=\"A\" analysis=\"\" /></Reading2></Reading></NEWTPO>";
+           // DatabaseHelp.ExecuteProc(test, "insert_new_tpo");
 
-            //DatabaseHelp.ExecuteProc(xmldoc.InnerXml, "insert_new_tpo");
+            DatabaseHelp.ExecuteProc(xmldoc.InnerXml, "insert_new_tpo");
             TransfEvent(textBox1.Text);
             this.Close();
             return;

@@ -84,14 +84,14 @@ namespace toefl
 
         private void button5_Click(object sender, EventArgs e)
         {
-            write write_form = new write(1);
+            write write_form = new write(tpoNo);
             write_form.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             //艾特zfy，下面那个1，你改上面的时候也改一下这个，也一起改一下
-            write write_form = new write(1, 2);
+            write write_form = new write(tpoNo, 2);
             write_form.ShowDialog();
         }
     }
