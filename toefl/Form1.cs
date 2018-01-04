@@ -98,11 +98,13 @@ namespace toefl
                 sql += SystemConfig.name;
                 sql += "' and correct = 0 group by id))) as xx on ReadingQuestion.id = xx.id order by date desc";
                 SqlDataReader reader = DatabaseHelp.getReader(sql);
+                errid = new int[15];
                 for (int i = 0; i < 15; i++)
                 {
                     if (!reader.Read())
                         break;
                     listBox1.Items.Add(reader["type"] + ":" + reader["stem"]);
+                    errid[i] = Convert.ToInt32(reader["id"]);
                 }
                 reader.Close();
             }
@@ -221,8 +223,33 @@ namespace toefl
                 this.panel1.ContextMenuStrip = this.contextMenuStrip1;
             }
             else
+            {
                 SystemConfig.authority = false;
+            }
 
+            string sql = "SELECT [subject] FROM[dbo].[ReadingArticleSubject]";
+            SqlDataReader reader = DatabaseHelp.getReader(sql);
+            while (reader.Read())
+            {
+                comboBox1.Items.Add(reader["subject"]);
+            }
+            reader.Close();
+
+            sql = "SELECT [subject]  FROM[dbo].[ComWritingSubject]";
+            reader = DatabaseHelp.getReader(sql);
+            while (reader.Read())
+            {
+                comboBox3.Items.Add(reader["subject"]);
+            }
+            reader.Close();
+
+            sql = "SELECT [subject]  FROM[dbo].[IndWritingSubject]";
+            reader = DatabaseHelp.getReader(sql);
+            while (reader.Read())
+            {
+                comboBox4.Items.Add(reader["subject"]);
+            }
+            reader.Close();
         }
 
         private void addtpoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -283,6 +310,102 @@ namespace toefl
         {
             feedback bk = new feedback();
             bk.ShowDialog();
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)//综合写作
+        {
+            
+            string sql = "SELECT * FROM[dbo].[ComWritingProblem] WHERE subject='"+comboBox3.SelectedItem+"'";
+            listView3.Items.Clear();
+            SqlDataReader reader = DatabaseHelp.getReader(sql);
+            int i = 0;
+            while (reader.Read())
+            {
+                
+                listView3.Items.Add(new ListViewItem(new string[] { (i + 1).ToString(), DatabaseHelp.convert("", reader["setid"].ToString()) }));
+                i++;
+            }
+            reader.Close();
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sql = "SELECT * FROM[dbo].[IndWritingProblem] WHERE subject='" + comboBox4.SelectedItem + "'";
+            listView4.Items.Clear();
+            SqlDataReader reader = DatabaseHelp.getReader(sql);
+            int i = 0;
+            while (reader.Read())
+            {
+
+                listView4.Items.Add(new ListViewItem(new string[] { (i + 1).ToString(), DatabaseHelp.convert("", reader["setid"].ToString()) }));
+                i++;
+            }
+            reader.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sql = "SELECT * FROM[dbo].[ReadingArticle] WHERE subject='" + comboBox1.SelectedItem + "'";
+            listView1.Items.Clear();
+            SqlDataReader reader = DatabaseHelp.getReader(sql);
+            int i = 0;
+            while (reader.Read())
+            {
+
+                listView1.Items.Add(new ListViewItem(new string[] { (i + 1).ToString(), DatabaseHelp.convert("", reader["setid"].ToString()), DatabaseHelp.convert("", reader["title"])}));
+                i++;
+            }
+            reader.Close();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sql = "SELECT * FROM[dbo].[ReadingQuestion] WHERE type='" + comboBox2.SelectedItem + "'";
+            listView2.Items.Clear();
+            SqlDataReader reader = DatabaseHelp.getReader(sql);
+            int i = 0;
+            while (reader.Read())
+            {
+
+                listView2.Items.Add(new ListViewItem(new string[] { (i + 1).ToString(), DatabaseHelp.convert("", reader["num"].ToString()), DatabaseHelp.convert("", reader["stem"]) ,reader["id"].ToString()}));
+                i++;
+            }
+            reader.Close();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count != 1)
+                return;
+            string title=listView1.SelectedItems[0].SubItems[2].Text;
+            string sql = "select [id] from [dbo].[ReadingArticle] where title='"+title+"'";
+            SqlDataReader reader = DatabaseHelp.getReader(sql);
+            reader.Read();
+            int x = DatabaseHelp.convert(1,reader["id"]);
+            reader.Close();
+            reading rd = new reading(1,x);
+            rd.ShowDialog();
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count != 1)
+                return;
+            int num = Convert.ToInt32( listView2.SelectedItems[0].SubItems[3].Text);
+            reading rd = new reading(3, num);
+            rd.ShowDialog();
+        }
+
+        private void listView4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            write wrt = new write(2,Convert.ToInt32(listView4.SelectedItems[0].SubItems[1].Text));
+            wrt.ShowDialog();
+        }
+
+        private void listView3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            write wrt = new write(1, Convert.ToInt32(listView3.SelectedItems[0].SubItems[1].Text));
+            wrt.ShowDialog();
         }
     }
 }
