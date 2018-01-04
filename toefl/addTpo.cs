@@ -53,6 +53,13 @@ namespace toefl
                 comboBox1.Items.Add(reader["type"]);
             }
             reader.Close();
+            sql = "select * from ReadingArticleSubject";
+            reader = DatabaseHelp.getReader(sql);
+            while (reader.Read())
+            {
+                comboBox2.Items.Add(reader["subject"]);
+            }
+            reader.Close();
         }
         //选择题目reading writing
         private void radioButton_CheckedChanged(object sender, EventArgs e)
@@ -580,7 +587,7 @@ namespace toefl
                 {
                     Readtext[model - 1, 0, 0] = richTextBox1.Text;
                     Readtext[model - 1, 0, 1] = textBox2.Text;
-                    Readtext[model - 1, 0, 2] = textBox3.Text;
+                    Readtext[model - 1, 0, 2] = comboBox2.Text;
                 }
                 else if (model == 4)
                     comWritetext[3] = richTextBox1.Text;
@@ -689,6 +696,14 @@ namespace toefl
             {
                 comboBox1.Items.Add(comboBox1.Text);
                 sql = "insert into ReadingQuestionType values('" + comboBox1.Text + "')";
+                DatabaseHelp.executeCommand(sql);
+            }
+
+            sql = "select * from ReadingArticleSubject where subject = '" + comboBox2.Text + "'";
+            if (DatabaseHelp.SelectNum(sql) == 0)
+            {
+                comboBox2.Items.Add(comboBox2.Text);
+                sql = "insert into ReadingArticleSubject values('" + comboBox2.Text + "')";
                 DatabaseHelp.executeCommand(sql);
             }
             MessageBox.Show("完成");

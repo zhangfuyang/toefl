@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -80,6 +79,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -98,7 +98,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.textBox3);
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox2);
             this.splitContainer1.Panel1.Controls.Add(this.label15);
             this.splitContainer1.Panel1.Controls.Add(this.textBox2);
             this.splitContainer1.Panel1.Controls.Add(this.label14);
@@ -147,14 +147,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(2562, 1550);
             this.splitContainer1.SplitterDistance = 346;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox3.Location = new System.Drawing.Point(1885, 261);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(229, 53);
-            this.textBox3.TabIndex = 17;
             // 
             // label15
             // 
@@ -652,6 +644,15 @@
             this.comboBox1.Size = new System.Drawing.Size(870, 58);
             this.comboBox1.TabIndex = 56;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(1904, 262);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(366, 48);
+            this.comboBox2.TabIndex = 57;
+            // 
             // addTpo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
@@ -725,8 +726,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
