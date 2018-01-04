@@ -17,5 +17,8 @@ namespace toefl
         public static int question_num;
         public static double acc;
         public static double time;
+        public static double start_time;
+        public static double end_time;
+        
     }
 }

@@ -71,13 +71,22 @@ namespace toefl
             }
             reader.Close();
         }
-
+        private int Timer()
+        {
+            DateTime t;
+            t = DateTime.Now;
+            return t.Hour * 60 + t.Minute;
+        }
         private void setup()
         {
+            double time = SystemConfig.time;
             label1.Text = "你好! " + SystemConfig.name;
-            study_label.Text = "    累计学习时间:" + SystemConfig.time.ToString() + "h";
-            right_label.Text = "      平均正确率:" + SystemConfig.acc.ToString();
+            study_label.Text = "    累计学习时间:" + ((int)time).ToString() + "h";
+            if((int)((time - (int)time) * 60) != 0)
+               study_label.Text += ((int)((time - (int)time) * 60)).ToString() + "m";
+            right_label.Text = "      平均正确率:" + SystemConfig.acc.ToString("f2");
             count_label.Text = "累计练习题目数量:" + SystemConfig.question_num.ToString();
+            SystemConfig.start_time = Timer();
             if (SystemConfig.name == "admin")
             {
                 label5.Text = "意见反馈列表";
@@ -98,11 +107,13 @@ namespace toefl
                 sql += SystemConfig.name;
                 sql += "' and correct = 0 group by id))) as xx on ReadingQuestion.id = xx.id order by date desc";
                 SqlDataReader reader = DatabaseHelp.getReader(sql);
+                errid = new int[15];
                 for (int i = 0; i < 15; i++)
                 {
                     if (!reader.Read())
                         break;
                     listBox1.Items.Add(reader["type"] + ":" + reader["stem"]);
+                    errid[i] = Convert.ToInt32(reader["id"]);
                 }
                 reader.Close();
             }
@@ -159,6 +170,20 @@ namespace toefl
            // this.Hide();
             Dialog_form.ShowDialog();
             //this.Show();
+            updateAccNum();
+        }
+
+        private void updateAccNum()
+        {
+            string sql;
+            sql = "select * from Users where name = '" + SystemConfig.name + "'";
+            SqlDataReader reader = DatabaseHelp.getReader(sql);
+            reader.Read();
+            SystemConfig.acc = DatabaseHelp.convert(SystemConfig.acc, reader["acc"]);
+            SystemConfig.question_num = DatabaseHelp.convert(SystemConfig.question_num, reader["question_num"]);
+            reader.Close();
+            right_label.Text = "      平均正确率:" + SystemConfig.acc.ToString("f2");
+            count_label.Text = "累计练习题目数量:" + SystemConfig.question_num.ToString();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -167,7 +192,11 @@ namespace toefl
             if(closeWindowsBox == DialogResult.Yes)
             {
                 //写入数据库
-
+                SystemConfig.end_time = Timer();
+                double updateTime = SystemConfig.end_time - SystemConfig.start_time;
+                updateTime = SystemConfig.time + updateTime / 60;
+                string sql = "update Users set time = " + updateTime + "where name = '" + SystemConfig.name + "'";
+                DatabaseHelp.executeCommand(sql);
             }
         }
 
