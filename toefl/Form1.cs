@@ -398,12 +398,16 @@ namespace toefl
 
         private void listView4_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listView4.SelectedItems.Count != 1)
+                return;
             write wrt = new write(2,Convert.ToInt32(listView4.SelectedItems[0].SubItems[1].Text));
             wrt.ShowDialog();
         }
 
         private void listView3_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listView3.SelectedItems.Count != 1)
+                return;
             write wrt = new write(1, Convert.ToInt32(listView3.SelectedItems[0].SubItems[1].Text));
             wrt.ShowDialog();
         }
