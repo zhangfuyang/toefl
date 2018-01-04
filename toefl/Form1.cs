@@ -89,6 +89,9 @@ namespace toefl
             SystemConfig.start_time = Timer();
             if (SystemConfig.name == "admin")
             {
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
                 label5.Text = "意见反馈列表";
                 listBox1.Items.Clear();
                 string sql = "select * from (select *,ROW_NUMBER() over(order by date) as num from UserSuggestion) as x where num < 15";

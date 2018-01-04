@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Data.SqlClient;
 
 namespace toefl
 {
@@ -45,6 +46,13 @@ namespace toefl
             {
                 indWritetext[i] = "";
             }
+            string sql = "select * from ReadingQuestionType";
+            SqlDataReader reader = DatabaseHelp.getReader(sql);
+            while(reader.Read())
+            {
+                comboBox1.Items.Add(reader["type"]);
+            }
+            reader.Close();
         }
         //选择题目reading writing
         private void radioButton_CheckedChanged(object sender, EventArgs e)
@@ -152,8 +160,8 @@ namespace toefl
                     richTextBox10.Enabled = false;
                     label11.Visible = true;
                     label11.Enabled = true;
-                    richTextBox11.Visible = true;
-                    richTextBox11.Enabled = true;
+                    comboBox1.Visible = true;
+                    comboBox1.Enabled = true;
                     label12.Visible = false;
                     label12.Enabled = false;
                     richTextBox12.Visible = false;
@@ -218,8 +226,8 @@ namespace toefl
                     richTextBox10.Enabled = false;
                     label11.Visible = false;
                     label11.Enabled = false;
-                    richTextBox11.Visible = false;
-                    richTextBox11.Enabled = false;
+                    comboBox1.Visible = false;
+                    comboBox1.Enabled = false;
                     label12.Visible = false;
                     label12.Enabled = false;
                     richTextBox12.Visible = false;
@@ -288,8 +296,8 @@ namespace toefl
                     richTextBox10.Enabled = false;
                     label11.Visible = true;
                     label11.Enabled = true;
-                    richTextBox11.Visible = true;
-                    richTextBox11.Enabled = true;
+                    comboBox1.Visible = true;
+                    comboBox1.Enabled = true;
                     label12.Visible = false;
                     label12.Enabled = false;
                     richTextBox12.Visible = false;
@@ -354,8 +362,8 @@ namespace toefl
                     richTextBox10.Enabled = false;
                     label11.Visible = false;
                     label11.Enabled = false;
-                    richTextBox11.Visible = false;
-                    richTextBox11.Enabled = false;
+                    comboBox1.Visible = false;
+                    comboBox1.Enabled = false;
                     label12.Visible = false;
                     label12.Enabled = false;
                     richTextBox12.Visible = false;
@@ -424,8 +432,8 @@ namespace toefl
                     richTextBox10.Enabled = true;
                     label11.Visible = true;
                     label11.Enabled = true;
-                    richTextBox11.Visible = true;
-                    richTextBox11.Enabled = true;
+                    comboBox1.Visible = true;
+                    comboBox1.Enabled = true;
                     label12.Visible = true;
                     label12.Enabled = true;
                     richTextBox12.Visible = true;
@@ -491,8 +499,8 @@ namespace toefl
                     richTextBox10.Enabled = false;
                     label11.Visible = false;
                     label11.Enabled = false;
-                    richTextBox11.Visible = false;
-                    richTextBox11.Enabled = false;
+                    comboBox1.Visible = false;
+                    comboBox1.Enabled = false;
                     label12.Visible = false;
                     label12.Enabled = false;
                     richTextBox12.Visible = false;
@@ -535,7 +543,7 @@ namespace toefl
                     Readtext[model - 1, index, 7] = richTextBox7.Text;
                     Readtext[model - 1, index, 8] = richTextBox8.Text;
                     Readtext[model - 1, index, 9] = richTextBox9.Text;
-                    Readtext[model - 1, index, 0] = richTextBox11.Text;
+                    Readtext[model - 1, index, 0] = comboBox1.Text;
                     Readtext[model - 1, index, 1] = richTextBox12.Text;
                     Readtext[model - 1, index, 11] = richTextBox10.Text;
 
@@ -558,12 +566,12 @@ namespace toefl
                 else if (model == 4)//综合写作的
                 {
                     comWritetext[0] = richTextBox2.Text;
-                    comWritetext[1] = richTextBox11.Text;
+                    comWritetext[1] = comboBox1.Text;
                 }
                 else if(model == 5) //独立写作
                 {
                     indWritetext[0] = richTextBox2.Text;
-                    indWritetext[1] = richTextBox11.Text;
+                    indWritetext[1] = comboBox1.Text;
                 }
             }
             else if(model2 == 2) //文章
@@ -604,7 +612,7 @@ namespace toefl
                 richTextBox8.Text = Readtext[model - 1, index, 8];
                 richTextBox9.Text = Readtext[model - 1, index, 9];
                 richTextBox10.Text = Readtext[model - 1, index, 11];
-                richTextBox11.Text = Readtext[model - 1, index, 0];
+                comboBox1.Text = Readtext[model - 1, index, 0];
                 richTextBox12.Text = Readtext[model - 1, index, 1];
                 checkBox1.Checked = false;
                 checkBox2.Checked = false;
@@ -634,7 +642,7 @@ namespace toefl
             else if (model == 4) //综合写作
             {
                 richTextBox2.Text = comWritetext[0];
-                richTextBox11.Text = comWritetext[1];
+                comboBox1.Text = comWritetext[1];
                 if (model2 == 2)
                     richTextBox1.Text = comWritetext[3];
                 if (model2 == 3)
@@ -643,7 +651,7 @@ namespace toefl
             else //独立写作
             {
                 richTextBox2.Text = indWritetext[0];
-                richTextBox11.Text = indWritetext[1];
+                comboBox1.Text = indWritetext[1];
                 richTextBox1.Text = indWritetext[2];
             }
         }
@@ -676,6 +684,13 @@ namespace toefl
         private void button3_Click(object sender, EventArgs e)
         {
             intostring();
+            string sql = "select * from ReadingQuestionType where type = '" + comboBox1.Text + "'";
+            if(DatabaseHelp.SelectNum(sql) == 0)
+            {
+                comboBox1.Items.Add(comboBox1.Text);
+                sql = "insert into ReadingQuestionType values('" + comboBox1.Text + "')";
+                DatabaseHelp.executeCommand(sql);
+            }
             MessageBox.Show("完成");
         }
 

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -48,7 +52,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox12 = new System.Windows.Forms.RichTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
@@ -76,10 +79,7 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -114,9 +114,9 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel2.Controls.Add(this.richTextBox12);
             this.splitContainer1.Panel2.Controls.Add(this.label12);
-            this.splitContainer1.Panel2.Controls.Add(this.richTextBox11);
             this.splitContainer1.Panel2.Controls.Add(this.label11);
             this.splitContainer1.Panel2.Controls.Add(this.checkBox6);
             this.splitContainer1.Panel2.Controls.Add(this.checkBox7);
@@ -147,6 +147,42 @@
             this.splitContainer1.Size = new System.Drawing.Size(2562, 1550);
             this.splitContainer1.SplitterDistance = 346;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox3.Location = new System.Drawing.Point(1885, 261);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(229, 53);
+            this.textBox3.TabIndex = 17;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label15.Location = new System.Drawing.Point(1702, 264);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(177, 40);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "阅读主题";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox2.Location = new System.Drawing.Point(1410, 261);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(229, 53);
+            this.textBox2.TabIndex = 15;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Location = new System.Drawing.Point(1227, 264);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(177, 40);
+            this.label14.TabIndex = 14;
+            this.label14.Text = "阅读题目";
             // 
             // label13
             // 
@@ -355,14 +391,6 @@
             this.label12.Size = new System.Drawing.Size(157, 80);
             this.label12.TabIndex = 54;
             this.label12.Text = "段落(逗\r\n号间隔)";
-            // 
-            // richTextBox11
-            // 
-            this.richTextBox11.Location = new System.Drawing.Point(1478, 28);
-            this.richTextBox11.Name = "richTextBox11";
-            this.richTextBox11.Size = new System.Drawing.Size(870, 94);
-            this.richTextBox11.TabIndex = 53;
-            this.richTextBox11.Text = "";
             // 
             // label11
             // 
@@ -615,41 +643,14 @@
             this.richTextBox1.TabIndex = 26;
             this.richTextBox1.Text = "";
             // 
-            // label14
+            // comboBox1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(1227, 264);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(177, 40);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "阅读题目";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(1410, 261);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(229, 53);
-            this.textBox2.TabIndex = 15;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox3.Location = new System.Drawing.Point(1885, 261);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(229, 53);
-            this.textBox3.TabIndex = 17;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(1702, 264);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(177, 40);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "阅读主题";
+            this.comboBox1.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(1478, 33);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(870, 58);
+            this.comboBox1.TabIndex = 56;
             // 
             // addTpo
             // 
@@ -693,7 +694,6 @@
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RichTextBox richTextBox12;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.RichTextBox richTextBox11;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox7;
@@ -727,5 +727,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
