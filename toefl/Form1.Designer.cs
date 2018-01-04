@@ -38,17 +38,33 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.No = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tpoid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.listView4 = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -63,24 +79,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addtpoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.edittpoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.listView4 = new System.Windows.Forms.ListView();
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -108,7 +107,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -129,8 +128,9 @@
             this.splitContainer1.Panel2.Controls.Add(this.study_label);
             this.splitContainer1.Panel2.Controls.Add(this.split_label);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Size = new System.Drawing.Size(1839, 1106);
-            this.splitContainer1.SplitterDistance = 1402;
+            this.splitContainer1.Size = new System.Drawing.Size(981, 528);
+            this.splitContainer1.SplitterDistance = 747;
+            this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 0;
             // 
             // tabControl1
@@ -141,21 +141,21 @@
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1402, 1106);
+            this.tabControl1.Size = new System.Drawing.Size(747, 528);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Location = new System.Drawing.Point(10, 48);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1382, 1048);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Size = new System.Drawing.Size(739, 499);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "主页";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -164,21 +164,20 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1374, 1040);
+            this.panel1.Size = new System.Drawing.Size(735, 495);
             this.panel1.TabIndex = 0;
             // 
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Location = new System.Drawing.Point(10, 48);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1382, 1048);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Size = new System.Drawing.Size(739, 499);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "阅读";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -187,10 +186,9 @@
             // 
             this.panel2.Controls.Add(this.tabControl2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(4, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel2.Location = new System.Drawing.Point(2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1374, 1040);
+            this.panel2.Size = new System.Drawing.Size(735, 495);
             this.panel2.TabIndex = 0;
             // 
             // tabControl2
@@ -199,20 +197,20 @@
             this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1374, 1040);
+            this.tabControl2.Size = new System.Drawing.Size(735, 495);
             this.tabControl2.TabIndex = 1;
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.panel3);
-            this.tabPage4.Location = new System.Drawing.Point(10, 48);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage4.Size = new System.Drawing.Size(1354, 982);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Size = new System.Drawing.Size(727, 466);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "学科练习";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -222,36 +220,64 @@
             this.panel3.Controls.Add(this.listView1);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(4, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel3.Location = new System.Drawing.Point(2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1346, 974);
+            this.panel3.Size = new System.Drawing.Size(723, 462);
             this.panel3.TabIndex = 0;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.No,
+            this.tpoid,
+            this.title});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(0, 38);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(723, 424);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // No
+            // 
+            this.No.Text = "序号";
+            this.No.Width = 224;
+            // 
+            // tpoid
+            // 
+            this.tpoid.Text = "tpo编号";
+            this.tpoid.Width = 428;
+            // 
+            // title
+            // 
+            this.title.Text = "标题";
+            this.title.Width = 501;
             // 
             // comboBox1
             // 
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "社会",
-            "生活",
-            "校园",
-            "海洋",
-            "地理"});
             this.comboBox1.Location = new System.Drawing.Point(0, 0);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(1346, 68);
+            this.comboBox1.Size = new System.Drawing.Size(723, 38);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.panel5);
-            this.tabPage6.Location = new System.Drawing.Point(10, 48);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1354, 982);
+            this.tabPage6.Size = new System.Drawing.Size(727, 466);
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "题型练习";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -262,41 +288,78 @@
             this.panel5.Controls.Add(this.comboBox2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1354, 982);
+            this.panel5.Size = new System.Drawing.Size(727, 466);
             this.panel5.TabIndex = 0;
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader8});
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.listView2.GridLines = true;
+            this.listView2.Location = new System.Drawing.Point(0, 38);
+            this.listView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(727, 428);
+            this.listView2.TabIndex = 2;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "序号";
+            this.columnHeader1.Width = 224;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "题号";
+            this.columnHeader2.Width = 428;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "题目";
+            this.columnHeader3.Width = 501;
             // 
             // comboBox2
             // 
             this.comboBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "词汇题",
             "否定事实信息题",
-            "事实信息题",
-            "句子插入题",
-            "修辞目的题",
-            "推理题",
             "概要小结题",
-            "句子简化题",
-            "组织结构题",
-            "指代题"});
+            "句子插入题",
+            "句子改写题",
+            "句子转述题",
+            "目的题",
+            "事实信息题",
+            "推理题",
+            "细节题",
+            "指代题",
+            "组织结构题"});
             this.comboBox2.Location = new System.Drawing.Point(0, 0);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(1354, 68);
+            this.comboBox2.Size = new System.Drawing.Size(727, 38);
             this.comboBox2.TabIndex = 1;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // tabPage3
             // 
             this.tabPage3.AutoScroll = true;
             this.tabPage3.Controls.Add(this.panel6);
-            this.tabPage3.Location = new System.Drawing.Point(10, 48);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1382, 1048);
+            this.tabPage3.Size = new System.Drawing.Size(739, 499);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "写作";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -306,9 +369,8 @@
             this.panel6.Controls.Add(this.tabControl3);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1382, 1048);
+            this.panel6.Size = new System.Drawing.Size(739, 499);
             this.panel6.TabIndex = 0;
             // 
             // tabControl3
@@ -317,20 +379,20 @@
             this.tabControl3.Controls.Add(this.tabPage8);
             this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl3.Location = new System.Drawing.Point(0, 0);
-            this.tabControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1382, 1048);
+            this.tabControl3.Size = new System.Drawing.Size(739, 499);
             this.tabControl3.TabIndex = 1;
             // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.panel7);
-            this.tabPage7.Location = new System.Drawing.Point(10, 48);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage7.Size = new System.Drawing.Size(1362, 990);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage7.Size = new System.Drawing.Size(731, 470);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "综合写作";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -338,23 +400,62 @@
             // panel7
             // 
             this.panel7.AutoScroll = true;
-            this.panel7.Controls.Add(this.listView4);
-            this.panel7.Controls.Add(this.comboBox4);
+            this.panel7.Controls.Add(this.listView3);
+            this.panel7.Controls.Add(this.comboBox3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(4, 4);
-            this.panel7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel7.Location = new System.Drawing.Point(2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1354, 982);
+            this.panel7.Size = new System.Drawing.Size(727, 466);
             this.panel7.TabIndex = 0;
+            // 
+            // listView3
+            // 
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.listView3.GridLines = true;
+            this.listView3.Location = new System.Drawing.Point(0, 38);
+            this.listView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(727, 428);
+            this.listView3.TabIndex = 2;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            this.listView3.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "序号";
+            this.columnHeader4.Width = 224;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "tpo编号";
+            this.columnHeader5.Width = 993;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(0, 0);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(727, 38);
+            this.comboBox3.TabIndex = 1;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.panel8);
-            this.tabPage8.Location = new System.Drawing.Point(10, 48);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage8.Size = new System.Drawing.Size(1362, 990);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage8.Size = new System.Drawing.Size(731, 470);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "独立写作";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -362,21 +463,59 @@
             // panel8
             // 
             this.panel8.AutoScroll = true;
-            this.panel8.Controls.Add(this.listView3);
-            this.panel8.Controls.Add(this.comboBox3);
+            this.panel8.Controls.Add(this.listView4);
+            this.panel8.Controls.Add(this.comboBox4);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(4, 4);
-            this.panel8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel8.Location = new System.Drawing.Point(2, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1354, 982);
+            this.panel8.Size = new System.Drawing.Size(727, 466);
             this.panel8.TabIndex = 0;
+            // 
+            // listView4
+            // 
+            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7});
+            this.listView4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.listView4.GridLines = true;
+            this.listView4.Location = new System.Drawing.Point(0, 38);
+            this.listView4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView4.Name = "listView4";
+            this.listView4.Size = new System.Drawing.Size(727, 428);
+            this.listView4.TabIndex = 3;
+            this.listView4.UseCompatibleStateImageBehavior = false;
+            this.listView4.View = System.Windows.Forms.View.Details;
+            this.listView4.SelectedIndexChanged += new System.EventHandler(this.listView4_SelectedIndexChanged);
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "序号";
+            this.columnHeader6.Width = 224;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "tpo编号";
+            this.columnHeader7.Width = 993;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(0, 0);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(727, 38);
+            this.comboBox4.TabIndex = 2;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(45, 18);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button3.Location = new System.Drawing.Point(24, 9);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 50);
+            this.button3.Size = new System.Drawing.Size(81, 25);
             this.button3.TabIndex = 10;
             this.button3.Text = "意见反馈";
             this.button3.UseVisualStyleBackColor = true;
@@ -384,10 +523,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(32, 348);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Location = new System.Drawing.Point(17, 174);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 142);
+            this.button2.Size = new System.Drawing.Size(28, 71);
             this.button2.TabIndex = 9;
             this.button2.Text = "我的作文";
             this.button2.UseVisualStyleBackColor = true;
@@ -395,10 +533,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(32, 222);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(17, 111);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 108);
+            this.button1.Size = new System.Drawing.Size(28, 54);
             this.button1.TabIndex = 8;
             this.button1.Text = "评作文";
             this.button1.UseVisualStyleBackColor = true;
@@ -408,11 +545,11 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
-            this.listBox1.ItemHeight = 30;
-            this.listBox1.Location = new System.Drawing.Point(-6, 588);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(-3, 294);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(433, 514);
+            this.listBox1.Size = new System.Drawing.Size(233, 259);
             this.listBox1.TabIndex = 7;
             this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDoubleClick);
             // 
@@ -420,10 +557,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(22, 534);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(12, 267);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(447, 50);
+            this.label5.Size = new System.Drawing.Size(225, 25);
             this.label5.TabIndex = 6;
             this.label5.Text = " 阅读最近错题回顾";
             // 
@@ -431,39 +568,39 @@
             // 
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(32, 480);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(17, 240);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(401, 10);
+            this.label4.Size = new System.Drawing.Size(214, 5);
             this.label4.TabIndex = 5;
             // 
             // count_label
             // 
             this.count_label.AutoSize = true;
-            this.count_label.Location = new System.Drawing.Point(73, 364);
-            this.count_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.count_label.Location = new System.Drawing.Point(39, 182);
+            this.count_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.count_label.Name = "count_label";
-            this.count_label.Size = new System.Drawing.Size(298, 30);
+            this.count_label.Size = new System.Drawing.Size(151, 15);
             this.count_label.TabIndex = 4;
             this.count_label.Text = "累计练习题目数量:xx";
             // 
             // right_label
             // 
             this.right_label.AutoSize = true;
-            this.right_label.Location = new System.Drawing.Point(73, 312);
-            this.right_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.right_label.Location = new System.Drawing.Point(39, 156);
+            this.right_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.right_label.Name = "right_label";
-            this.right_label.Size = new System.Drawing.Size(298, 30);
+            this.right_label.Size = new System.Drawing.Size(154, 15);
             this.right_label.TabIndex = 3;
             this.right_label.Text = "      平均正确率:xx";
             // 
             // study_label
             // 
             this.study_label.AutoSize = true;
-            this.study_label.Location = new System.Drawing.Point(73, 262);
-            this.study_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.study_label.Location = new System.Drawing.Point(39, 131);
+            this.study_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.study_label.Name = "study_label";
-            this.study_label.Size = new System.Drawing.Size(298, 30);
+            this.study_label.Size = new System.Drawing.Size(153, 15);
             this.study_label.TabIndex = 2;
             this.study_label.Text = "    累计学习时间:xx";
             // 
@@ -471,10 +608,10 @@
             // 
             this.split_label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.split_label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.split_label.Location = new System.Drawing.Point(32, 188);
-            this.split_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.split_label.Location = new System.Drawing.Point(17, 94);
+            this.split_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.split_label.Name = "split_label";
-            this.split_label.Size = new System.Drawing.Size(401, 10);
+            this.split_label.Size = new System.Drawing.Size(214, 5);
             this.split_label.TabIndex = 1;
             // 
             // label1
@@ -484,10 +621,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(69, 74);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(37, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 50);
+            this.label1.Size = new System.Drawing.Size(126, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "你好！XXX";
             // 
@@ -498,193 +635,33 @@
             this.addtpoToolStripMenuItem,
             this.edittpoToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(204, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 52);
             // 
             // addtpoToolStripMenuItem
             // 
             this.addtpoToolStripMenuItem.Name = "addtpoToolStripMenuItem";
-            this.addtpoToolStripMenuItem.Size = new System.Drawing.Size(203, 44);
+            this.addtpoToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.addtpoToolStripMenuItem.Text = "增加tpo";
             this.addtpoToolStripMenuItem.Click += new System.EventHandler(this.addtpoToolStripMenuItem_Click);
             // 
             // edittpoToolStripMenuItem
             // 
             this.edittpoToolStripMenuItem.Name = "edittpoToolStripMenuItem";
-            this.edittpoToolStripMenuItem.Size = new System.Drawing.Size(203, 44);
+            this.edittpoToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.edittpoToolStripMenuItem.Text = "修改tpo";
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(0, 68);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1346, 906);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "id";
-            this.columnHeader1.Width = 165;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "tpoid";
-            this.columnHeader2.Width = 466;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "title";
-            this.columnHeader3.Width = 508;
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(0, 68);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(1354, 914);
-            this.listView2.TabIndex = 2;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "id";
-            this.columnHeader4.Width = 165;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "tpoid";
-            this.columnHeader5.Width = 466;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "title";
-            this.columnHeader6.Width = 508;
-            // 
-            // listView3
-            // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9});
-            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView3.GridLines = true;
-            this.listView3.Location = new System.Drawing.Point(0, 68);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(1354, 914);
-            this.listView3.TabIndex = 4;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "id";
-            this.columnHeader7.Width = 165;
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "tpoid";
-            this.columnHeader8.Width = 466;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "title";
-            this.columnHeader9.Width = 508;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox3.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "词汇题",
-            "否定事实信息题",
-            "事实信息题",
-            "句子插入题",
-            "修辞目的题",
-            "推理题",
-            "概要小结题",
-            "句子简化题",
-            "组织结构题",
-            "指代题"});
-            this.comboBox3.Location = new System.Drawing.Point(0, 0);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(1354, 68);
-            this.comboBox3.TabIndex = 3;
-            // 
-            // listView4
-            // 
-            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12});
-            this.listView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView4.GridLines = true;
-            this.listView4.Location = new System.Drawing.Point(0, 68);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(1354, 914);
-            this.listView4.TabIndex = 4;
-            this.listView4.UseCompatibleStateImageBehavior = false;
-            this.listView4.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "id";
-            this.columnHeader10.Width = 165;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "tpoid";
-            this.columnHeader11.Width = 466;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "title";
-            this.columnHeader12.Width = 508;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox4.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "词汇题",
-            "否定事实信息题",
-            "事实信息题",
-            "句子插入题",
-            "修辞目的题",
-            "推理题",
-            "概要小结题",
-            "句子简化题",
-            "组织结构题",
-            "指代题"});
-            this.comboBox4.Location = new System.Drawing.Point(0, 0);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(1354, 68);
-            this.comboBox4.TabIndex = 3;
+            this.columnHeader8.Width = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1839, 1106);
+            this.ClientSize = new System.Drawing.Size(981, 528);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "TOFEL测试软件";
@@ -753,23 +730,22 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader No;
+        private System.Windows.Forms.ColumnHeader tpoid;
+        private System.Windows.Forms.ColumnHeader title;
+        private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView listView3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ListView listView4;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ListView listView3;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }
 

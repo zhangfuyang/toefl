@@ -704,13 +704,14 @@ namespace toefl
                     sc.WindowState = FormWindowState.Maximized;
                     sc.ShowDialog();
                     DialogResult = DialogResult.OK;
+                    submit();
                     this.Close();
                     return;
                 }else if (this.model == 2)
                 {
                     //提交并关闭
 
-
+                    submit();
                     //转综合写作
                     write wrt1 = new write(tponum, 2);
                     write wrt2 = new write(tponum, 1);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace toefl
 {
@@ -76,9 +77,17 @@ namespace toefl
 
         private void reading_Click(object sender, EventArgs e)
         {
-            int artnumber=this.tpoNo*3-3+ Convert.ToInt32((sender as Button).Name.Replace("button", ""));
-            //上面这句要改！改成sql语句
-            reading read_form = new reading(1,artnumber);
+            int artnumber=Convert.ToInt32((sender as Button).Name.Replace("button", ""));
+    
+            string name = "reading" + artnumber.ToString();
+            string sql = "select "+name+" from [dbo].[TestSet] where id=" + this.tpoNo.ToString();
+
+            SqlDataReader reader = DatabaseHelp.getReader(sql);
+            reader.Read();
+            int x = DatabaseHelp.convert(1, reader[name]);
+            reader.Close();
+
+            reading read_form = new reading(1,x);
             read_form.ShowDialog();
         }
 
@@ -90,7 +99,7 @@ namespace toefl
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //艾特zfy，下面那个1，你改上面的时候也改一下这个，也一起改一下
+
             write write_form = new write(tpoNo, 2);
             write_form.ShowDialog();
         }
