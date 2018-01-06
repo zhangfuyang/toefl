@@ -695,7 +695,12 @@ namespace toefl
             if(DatabaseHelp.SelectNum(sql) == 0)
             {
                 comboBox1.Items.Add(comboBox1.Text);
-                sql = "insert into ReadingQuestionType values('" + comboBox1.Text + "')";
+                if (model <= 3)
+                    sql = "insert into ReadingQuestionType values('" + comboBox1.Text + "')";
+                else if (model == 4)
+                    sql = "insert into ComWritingSubject values('" + comboBox1.Text + "')";
+                else
+                    sql = "insert into IndWritingSubject values('" + comboBox1.Text + "')";
                 DatabaseHelp.executeCommand(sql);
             }
 
